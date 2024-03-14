@@ -9,18 +9,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SistemasVentas.VISTA.PersonasVistas
+namespace SistemasVentas.VISTA.RolVista
 {
-    public partial class PersonaListarVista : Form
+    public partial class RolListarVista : Form
     {
-        public PersonaListarVista()
+        public RolListarVista()
         {
             InitializeComponent();
         }
-        PersonaBss bss = new PersonaBss();
-        private void PersonaListarVista_Load(object sender, EventArgs e)
+        RolBss bss = new RolBss();
+        private void RolListarVista_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = bss;
+            dataGridView1.DataSource = bss.ListarRolBss();
         }
     }
 }
