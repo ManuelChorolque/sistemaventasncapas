@@ -20,7 +20,7 @@ namespace SistemasVentas.DAL
         {
             string consulta = "insert into provee values(" + provee.IdProducto + "," +
                                                         "" + provee.IdProveedor + "," +
-                                                        "'" + provee.Fecha.ToString("yyyy-MM-dd HH:mm:ss") + "'," +
+                                                        "'" + provee.Fecha + "'," +
                                                         "'" + provee.Precio + "')";
             conexion.Ejecutar(consulta);
         }

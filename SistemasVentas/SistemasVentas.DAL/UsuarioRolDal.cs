@@ -20,7 +20,7 @@ namespace SistemasVentas.DAL
         {
             string consulta = "insert into usuarioRol values(" + usuarioRol.IdUsuario + "," +
                                                         "" + usuarioRol.IdRol + "," +
-                                                        "'" + usuarioRol.FechaAsigna.ToString("yyyy-MM-dd HH:mm:ss") + "'," + "'Activo')";
+                                                        "'" + usuarioRol.FechaAsigna+ "'," + "'Activo')";
             conexion.Ejecutar(consulta);
         }
     }

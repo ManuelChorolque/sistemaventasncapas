@@ -20,7 +20,7 @@ namespace SistemasVentas.DAL
         {
             string consulta = "insert into detalleIng values(" + detalleIng.IdIngreso + "," +
                                                         "" + detalleIng.IdProducto + "," +
-                                                        "'" + detalleIng.FechaVenc.ToString("yyyy-MM-dd HH:mm:ss") + "'," +
+                                                        "'" + detalleIng.FechaVenc+ "'," +
                                                         "" + detalleIng.Cantidad + "," +
                                                         "" + detalleIng.PrecioCosto + "," +
                                                         "" + detalleIng.PrecioVenta + "," +
