@@ -18,8 +18,7 @@ namespace SistemasVentas.DAL
         }
         public void InsertarRolDal(Rol rol)
         {
-            string consulta = "insert into rol values('" + rol.Nombre + "'," +                                                
-                                                  "'Activo')";
+            string consulta = "insert into rol values('" + rol.Nombre + "'," + "'Activo')";
             conexion.Ejecutar(consulta);
         }
     }

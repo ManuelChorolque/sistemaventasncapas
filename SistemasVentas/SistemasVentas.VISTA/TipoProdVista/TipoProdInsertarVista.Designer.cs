@@ -80,7 +80,6 @@
             Controls.Add(label1);
             Name = "TipoProdInsertarVista";
             Text = "TipoProdInsertarVista";
-            Load += TipoProdInsertarVista_Load;
             ResumeLayout(false);
             PerformLayout();
         }

@@ -10,24 +10,22 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SistemasVentas.VISTA.RolVista
+namespace SistemasVentas.VISTA.MarcaVista
 {
-    public partial class RolInserVista : Form
+    public partial class MarcaInsertarVista : Form
     {
-        public RolInserVista()
+        public MarcaInsertarVista()
         {
             InitializeComponent();
         }
-        RolBss bss = new RolBss();
+        MarcaBss bss= new MarcaBss();
         private void button1_Click(object sender, EventArgs e)
         {
-            Rol r = new Rol();
-            r.Nombre = textBox1.Text;      
+            Marca m= new Marca();
+            m.Nombre=textBox1.Text;
 
-            bss.InsertarRolBss(r);
-            MessageBox.Show("Se guardo correctamente el rol");
+            bss.InsertarMarcaBss(m);
+            MessageBox.Show("se guardo correctamente marca");
         }
-
-      
     }
 }
