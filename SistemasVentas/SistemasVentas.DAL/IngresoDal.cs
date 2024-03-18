@@ -19,7 +19,7 @@ namespace SistemasVentas.DAL
         public void InsertarIngresoDal(Ingreso ingreso)
         {
             string consulta = "insert into ingreso values(" + ingreso.IdProveedor + "," +
-                                                        "'" + ingreso.FechaIngreso.ToString("yyyy-MM-dd HH:mm:ss") + "'," +
+                                                        "'" + ingreso.FechaIngreso + "'," +
                                                         "'" + ingreso.Total + "'," +
                                                         "'Activo')";
             conexion.Ejecutar(consulta);

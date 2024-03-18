@@ -11,25 +11,26 @@ using SistemasVentas.BSS;
 using SistemasVentas.Modelos;
 using SistemasVentas.VISTA.PersonaVista;
 
-namespace SistemasVentas.VISTA.UsuariosInserVistasVer
+namespace SistemasVentas.VISTA.UsuarioVistas
 {
-    public partial class UsuariosInsertarVistaVer : Form
+    public partial class UsuarioInsertarVistas : Form
     {
-        public UsuariosInsertarVistaVer()
+        public UsuarioInsertarVistas()
         {
             InitializeComponent();
         }
         public static int IdPersonaSeleccionada = 0;
-        PersonaBss bss=new PersonaBss();
+        PersonaBss bss = new PersonaBss();
         private void button1_Click(object sender, EventArgs e)
         {
             PersonaListarVista fr = new PersonaListarVista();
-            if (fr.ShowDialog()==DialogResult.OK) 
+            if(fr.ShowDialog() ==DialogResult.OK)
             {
                 Persona persona = bss.ObtenerIdBss(IdPersonaSeleccionada);
-
                 textBox1.Text = persona.Nombre + " " + persona.Apellido;
             }
+
+
         }
     }
 }

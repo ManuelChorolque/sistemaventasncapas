@@ -20,7 +20,7 @@ namespace SistemasVentas.DAL
         {
             string consulta = "insert into venta values(" + venta.IdCliente + "," +
                                                         "" + venta.IdVendedor + "," +
-                                                        "'" + venta.Fecha.ToString("yyyy-MM-dd HH:mm:ss") + "'," +
+                                                        "'" + venta.Fecha + "'," +
                                                         "'" + venta.Total + "'," +
                                                         "'Exitoso')";
             conexion.Ejecutar(consulta);
