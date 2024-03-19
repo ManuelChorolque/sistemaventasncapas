@@ -24,5 +24,22 @@ namespace SistemasVentas.DAL
                                                             "'Activo')";
             conexion.Ejecutar(consulta);
         }
+        public Proveedor ObtenerProveedorId(int id)
+        {
+            string consulta = "select * from proveedor where idproveedor=" + id;
+            DataTable tabla = conexion.EjecutarDataTabla(consulta, "asdas");
+            Proveedor p = new Proveedor();
+
+            if (tabla.Rows.Count > 0)
+            {
+                p.IdProveedor = Convert.ToInt32(tabla.Rows[0]["idproveedor"]);
+                p.Nombre = tabla.Rows[0]["nombre"].ToString();
+                p.Telefono = tabla.Rows[0]["telefono"].ToString();
+                p.Direccion = tabla.Rows[0]["direccion"].ToString();
+                p.Estado = tabla.Rows[0]["estado"].ToString();
+            }
+            return p;
+
+        }
     }
 }

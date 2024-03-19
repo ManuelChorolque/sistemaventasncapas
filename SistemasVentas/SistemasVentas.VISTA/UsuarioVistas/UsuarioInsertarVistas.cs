@@ -36,7 +36,7 @@ namespace SistemasVentas.VISTA.UsuarioVistas
         private void button2_Click(object sender, EventArgs e)
         {
             Usuario usuario = new Usuario();
-            usuario.IdPersona= IdPersonaSeleccionada;
+            usuario.IdPersona = IdPersonaSeleccionada;
             usuario.NombreUser = textBox2.Text;
             usuario.Contraseña = textBox3.Text;
             usuario.FechaReg = dateTimePicker1.Value;

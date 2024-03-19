@@ -1,4 +1,7 @@
 ﻿using SistemasVentas.BSS;
+using SistemasVentas.VISTA.IngresoVistas;
+using SistemasVentas.VISTA.ProveeVistas;
+using SistemasVentas.VISTA.UsuarioRolVistas;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,6 +24,12 @@ namespace SistemasVentas.VISTA.ProveedorVista
         private void ProveedorListarVista_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource = bss.ListarProveedorBss();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ProveeInsertarVistas.IdProductoSeleccionado = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            ProveeInsertarVistas.IdProveedorSeleccionado = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
         }
     }
 }

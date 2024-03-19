@@ -20,5 +20,9 @@ namespace SistemasVentas.BSS
         {
             dal.InsertarMarcaDal(marca);
         }
+        public Marca ObtenerIdBss(int id)
+        {
+            return dal.ObtenerMarcaId(id);
+        }
     }
 }

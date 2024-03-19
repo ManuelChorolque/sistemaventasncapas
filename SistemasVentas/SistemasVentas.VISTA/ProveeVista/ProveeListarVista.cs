@@ -1,4 +1,5 @@
 ﻿using SistemasVentas.BSS;
+using SistemasVentas.VISTA.UsuarioRolVistas;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,6 +22,6 @@ namespace SistemasVentas.VISTA.ProveeVista
         private void ProveeListarVista_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource = bss.ListarProveeBss();
-        }
+        }      
     }
 }

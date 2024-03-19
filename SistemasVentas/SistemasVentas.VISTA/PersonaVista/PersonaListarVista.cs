@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SistemasVentas.VISTA.ClienteVistas;
 
 namespace SistemasVentas.VISTA.PersonaVista
 {
@@ -28,6 +29,8 @@ namespace SistemasVentas.VISTA.PersonaVista
         private void button1_Click(object sender, EventArgs e)
         {
             UsuarioInsertarVistas.IdPersonaSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            ClienteInsertarVistas.IdPersonaSeleccionada= Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            
         }
 
         private void button2_Click(object sender, EventArgs e)

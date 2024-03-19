@@ -1,4 +1,5 @@
 ﻿using SistemasVentas.BSS;
+using SistemasVentas.VISTA.UsuarioRolVistas;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,6 +22,11 @@ namespace SistemasVentas.VISTA.RolVista
         private void RolListarVista_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource = bss.ListarRolBss();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            UsuarioRolInsertarVistas.IdRolSeleccionado = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
         }
     }
 }
