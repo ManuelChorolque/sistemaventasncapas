@@ -21,7 +21,7 @@ namespace SistemasVentas.DAL
             string consulta = "insert into usuario values(" + usuario.IdPersona + "," +
                                                         "'" + usuario.NombreUser + "'," +
                                                         "'" + usuario.Contraseña + "'," +
-                                                        "'" + usuario.FechaReg.ToString("yyyy-MM-dd HH:mm:ss") + "')";
+                                                        "'" + usuario.FechaReg+ "')";
             conexion.Ejecutar(consulta);
         }
        

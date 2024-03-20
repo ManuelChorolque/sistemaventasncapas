@@ -36,5 +36,16 @@ namespace SistemasVentas.DAL
             return m;
 
         }
+        public void EditarMarcaDal(Marca m)
+        {
+            string consulta = "update marca set nombre='" + m.Nombre + "'" +                                        
+                                              "where idmarca=" + m.IdMarca;
+            conexion.Ejecutar(consulta);
+        }
+        public void EliminarMarcaDal(int id)
+        {
+            string consulta = "delete from marca where idmarca=" + id;
+            conexion.Ejecutar(consulta);
+        }
     }
 }

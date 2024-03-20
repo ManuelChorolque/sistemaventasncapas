@@ -46,5 +46,20 @@ namespace SistemasVentas.VISTA.ProductoVistas
                 textBox2.Text = marca.Nombre;
             }
         }
+
+        ProductoBss bssuser = new ProductoBss();
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Producto producto = new Producto();
+            producto.IdTipoProd = IdTipoProdSeleccionado;
+            producto.IdMarca = IdMarcaSeleccionado;
+            producto.Nombre=textBox3.Text;
+            producto.CodigoBarra = textBox4.Text;           
+            producto.Unidad = Convert.ToInt32(textBox5.Text);
+            producto.Descripcion = textBox6.Text;
+
+            bssuser.InsertarProductoBss(producto);
+            MessageBox.Show("Provee registrado");
+        }
     }
 }

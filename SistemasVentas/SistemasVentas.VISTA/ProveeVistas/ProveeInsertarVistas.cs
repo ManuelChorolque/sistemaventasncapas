@@ -30,7 +30,7 @@ namespace SistemasVentas.VISTA.ProveeVistas
             if (fr.ShowDialog() == DialogResult.OK)
             {
                 Producto producto = bss.ObtenerIdBss(IdProductoSeleccionado);
-                textBox1.Text = producto.Nombre;
+                textBox1.Text = producto.IdProducto.ToString();
             }
         }
 
@@ -42,8 +42,20 @@ namespace SistemasVentas.VISTA.ProveeVistas
             if (fr.ShowDialog() == DialogResult.OK)
             {
                 Proveedor proveedor = bss.ObtenerIdBss(IdProveedorSeleccionado);
-                textBox2.Text = proveedor.Nombre;
+                textBox2.Text = proveedor.IdProveedor.ToString();
             }
+        }
+        ProveeBss bssuser = new ProveeBss();
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Provee provee = new Provee();
+            provee.IdProducto = IdProductoSeleccionado;
+            provee.IdProveedor = IdProveedorSeleccionado;     
+            provee.Fecha = dateTimePicker1.Value;
+            provee.Precio = Convert.ToInt32(textBox3.Text);
+
+            bssuser.InsertarProveeBss(provee);
+            MessageBox.Show("Provee registrado");
         }
     }
 }

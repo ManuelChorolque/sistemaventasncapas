@@ -75,6 +75,7 @@
             this.button3.TabIndex = 43;
             this.button3.Text = "GUARDAR";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -129,20 +130,20 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(50, 158);
+            this.label2.Location = new System.Drawing.Point(36, 155);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 15);
+            this.label2.Size = new System.Drawing.Size(87, 15);
             this.label2.TabIndex = 36;
-            this.label2.Text = "PROVEEDOR";
+            this.label2.Text = "ID PROVEEDOR";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(55, 101);
+            this.label1.Location = new System.Drawing.Point(41, 101);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 15);
+            this.label1.Size = new System.Drawing.Size(82, 15);
             this.label1.TabIndex = 35;
-            this.label1.Text = "PRODUCTO";
+            this.label1.Text = "ID PRODUCTO";
             // 
             // ProveeInsertarVistas
             // 

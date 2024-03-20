@@ -26,5 +26,20 @@ namespace SistemasVentas.DAL
                                                         "'Exitoso')";
             conexion.Ejecutar(consulta);
         }
+        public void EditarDetalleVentaDal(DetalleVenta d)
+        {
+            string consulta = "update detalleventa set idventa=" + d.IdVenta + "," +
+                                                  "idproducto=" + d.IdProducto + "," +
+                                                  "cantidad=" + d.Cantidad + "," +
+                                                  "precioventa=" + d.PrecioVenta + "," +
+                                                  "subtotal=" + d.Subtotal + "," +
+                                              "where iddetalleventa=" + d.IdDetalleVenta;
+            conexion.Ejecutar(consulta);
+        }
+        public void EliminarDetalleVentaDal(int id)
+        {
+            string consulta = "delete from detalleventa where iddetalleventa=" + id;
+            conexion.Ejecutar(consulta);
+        }
     }
 }

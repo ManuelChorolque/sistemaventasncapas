@@ -37,5 +37,16 @@ namespace SistemasVentas.DAL
             return t;
 
         }
+        public void EditarTipoProdDal(TipoProd p)
+        {
+            string consulta = "update tipoprod set nombre='" + p.Nombre + "'," +
+                                              "where idtipoprod=" + p.IdTipoProd;
+            conexion.Ejecutar(consulta);
+        }
+        public void EliminarTipoProdDal(int id)
+        {
+            string consulta = "delete from tipoprod where idtipoprod=" + id;
+            conexion.Ejecutar(consulta);
+        }
     }
 }

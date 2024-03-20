@@ -20,5 +20,14 @@ namespace SistemasVentas.BSS
         {
             dal.InsertarDetalleVentaDal(detalleVenta);
         }
+        public void EditarDetalleVentaBss(DetalleVenta d)
+        {
+            dal.EditarDetalleVentaDal(d);
+        }
+        public void EliminarDetalleVentaBss(int id)
+        {
+            dal.EliminarDetalleVentaDal(id);
+
+        }
     }
 }

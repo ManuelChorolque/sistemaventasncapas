@@ -59,6 +59,7 @@
             this.button3.TabIndex = 31;
             this.button3.Text = "GUARDAR";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -113,20 +114,20 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(48, 157);
+            this.label2.Location = new System.Drawing.Point(34, 157);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 15);
+            this.label2.Size = new System.Drawing.Size(81, 15);
             this.label2.TabIndex = 24;
-            this.label2.Text = "VENDEDOR";
+            this.label2.Text = "ID VENDEDOR";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(64, 100);
+            this.label1.Location = new System.Drawing.Point(55, 100);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 15);
+            this.label1.Size = new System.Drawing.Size(65, 15);
             this.label1.TabIndex = 23;
-            this.label1.Text = "CLIENTE";
+            this.label1.Text = "ID CLIENTE";
             // 
             // label4
             // 

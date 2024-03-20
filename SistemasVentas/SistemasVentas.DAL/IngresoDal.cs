@@ -19,8 +19,8 @@ namespace SistemasVentas.DAL
         public void InsertarIngresoDal(Ingreso ingreso)
         {
             string consulta = "insert into ingreso values(" + ingreso.IdProveedor + "," +
-                                                        "'" + ingreso.FechaIngreso + "'," +
-                                                        "'" + ingreso.Total + "'," +
+                                                        "'" + ingreso.FechaIngreso.ToString("yyyy-MM-dd HH:mm:ss") + "'," +
+                                                        "" + ingreso.Total + "," +
                                                         "'Activo')";
             conexion.Ejecutar(consulta);
         }
@@ -40,6 +40,19 @@ namespace SistemasVentas.DAL
             }
             return i;
 
+        }
+        public void EditarIngresoDal(Ingreso i)
+        {
+            string consulta = "update ingreso set idproveedor=" + i.IdProveedor + "," +
+                                                  "fechaingreso='" + i.FechaIngreso + "'," +
+                                                  "total=" + i.Total + "" +
+                                              "where idingreso=" + i.IdIngreso;
+            conexion.Ejecutar(consulta);
+        }
+        public void EliminarIngresoDal(int id)
+        {
+            string consulta = "delete from ingreso where idingreso=" + id;
+            conexion.Ejecutar(consulta);
         }
 
     }

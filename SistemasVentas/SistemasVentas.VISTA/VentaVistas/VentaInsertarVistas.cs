@@ -29,7 +29,7 @@ namespace SistemasVentas.VISTA.VentaVistas
             if (fr.ShowDialog() == DialogResult.OK)
             {
                 Cliente cliente = bss.ObtenerIdBss(IdClienteSeleccionado);
-                textBox1.Text = cliente.TipoCliente;
+                textBox1.Text = cliente.IdCliente.ToString();
             }
         }
 
@@ -42,8 +42,21 @@ namespace SistemasVentas.VISTA.VentaVistas
             if (fr.ShowDialog() == DialogResult.OK)
             {
                 Usuario usuario = bss.ObtenerIdBss(IdVendedorSeleccionado);
-                textBox2.Text = usuario.NombreUser;
+                textBox2.Text = usuario.IdUsuario.ToString();
             }
+        }
+
+        VentaBss bssuser = new VentaBss();
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Venta venta = new Venta();
+            venta.IdCliente = IdClienteSeleccionado;
+            venta.IdVendedor = IdVendedorSeleccionado;     
+            venta.Fecha = dateTimePicker1.Value;
+            venta.Total = Convert.ToDecimal(textBox3.Text);
+
+            bssuser.InsertarVentaBss(venta);
+            MessageBox.Show("Venta registrado");
         }
     }
 }

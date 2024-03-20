@@ -24,5 +24,14 @@ namespace SistemasVentas.BSS
         {
             return dal.ObtenerIngresoId(id);
         }
+        public void EditarIngresoBss(Ingreso i)
+        {
+            dal.EditarIngresoDal(i);
+        }
+        public void EliminarIngresoBss(int id)
+        {
+            dal.EliminarIngresoDal(id);
+
+        }
     }
 }

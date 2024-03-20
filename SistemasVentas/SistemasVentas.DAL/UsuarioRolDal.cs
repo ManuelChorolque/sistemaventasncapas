@@ -20,7 +20,20 @@ namespace SistemasVentas.DAL
         {
             string consulta = "insert into usuarioRol values(" + usuarioRol.IdUsuario + "," +
                                                         "" + usuarioRol.IdRol + "," +
-                                                        "'" + usuarioRol.FechaAsigna+ "'," + "'Activo')";
+                                                        "'" + usuarioRol.FechaAsigna.ToString("yyyy-MM-dd HH:mm:ss") + "'," + "'Activo')";
+            conexion.Ejecutar(consulta);
+        }
+        public void EditarUsuarioRolDal(UsuarioRol u)
+        {
+            string consulta = "update usuariorol set idusuario=" + u.IdUsuario + "," +
+                                                  "idrol=" + u.IdRol + "," +
+                                                  "fechaasigna='" + u.FechaAsigna + "'" +
+                                              "where idusuariorol=" + u.IdUsuarioRol;
+            conexion.Ejecutar(consulta);
+        }
+        public void EliminarUsuarioRolDal(int id)
+        {
+            string consulta = "delete from usuariorol where idusuariorol=" + id;
             conexion.Ejecutar(consulta);
         }
     }

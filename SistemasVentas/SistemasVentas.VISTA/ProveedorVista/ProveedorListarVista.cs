@@ -29,7 +29,7 @@ namespace SistemasVentas.VISTA.ProveedorVista
         private void button1_Click(object sender, EventArgs e)
         {
             ProveeInsertarVistas.IdProductoSeleccionado = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
-            ProveeInsertarVistas.IdProveedorSeleccionado = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            IngresoInsertarVistas.IdProveedorSeleccionado = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
         }
     }
 }

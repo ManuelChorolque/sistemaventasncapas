@@ -20,5 +20,14 @@ namespace SistemasVentas.BSS
         {
             dal.InsertarUsuarioRolDal(usuarioRol);
         }
+        public void EditarUsuarioRolBss(UsuarioRol u)
+        {
+            dal.EditarUsuarioRolDal(u);
+        }
+        public void EliminarUsuarioRolBss(int id)
+        {
+            dal.EliminarUsuarioRolDal(id);
+
+        }
     }
 }

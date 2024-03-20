@@ -36,5 +36,16 @@ namespace SistemasVentas.DAL
             return r;
 
         }
+        public void EditarRolDal(Rol r)
+        {
+            string consulta = "update rol set nombre='" + r.Nombre + "'" +                                             
+                                                     "where idrol=" + r.IdRol;
+            conexion.Ejecutar(consulta);
+        }
+        public void EliminarRolDal(int id)
+        {
+            string consulta = "delete from rol where idrol=" + id;
+            conexion.Ejecutar(consulta);
+        }
     }
 }

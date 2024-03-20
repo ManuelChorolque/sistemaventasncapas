@@ -24,5 +24,14 @@ namespace SistemasVentas.BSS
         {
             return dal.ObtenerClienteId(id);
         }
+        public void EditarClienteBss(Cliente c)
+        {
+            dal.EditarClienteDal(c);
+        }
+        public void EliminarClienteBss(int id)
+        {
+            dal.EliminarClienteDal(id);
+
+        }
     }
 }
