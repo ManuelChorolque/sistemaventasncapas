@@ -3,6 +3,7 @@ using SistemasVentas.VISTA.PersonaVista;
 using SistemasVentas.VISTA.UsuarioRolVista;
 using SistemasVentas.VISTA.UsuarioRolVistas;
 using SistemasVentas.VISTA.VentaVistas;
+using SistemasVentas.VISTA.UsuarioVistas;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -35,7 +36,7 @@ namespace SistemasVentas.VISTA.UsuarioVista
 
         private void button2_Click(object sender, EventArgs e)
         {
-            UsuarioInsertarVista fr = new UsuarioInsertarVista();
+            UsuarioInsertarVistas fr = new UsuarioInsertarVistas();
             if (fr.ShowDialog() == DialogResult.OK)
             {
                 dataGridView1.DataSource = bss.ListarUsuarioBss();
