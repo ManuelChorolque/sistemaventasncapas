@@ -1,6 +1,6 @@
-﻿namespace SistemasVentas.VISTA.VendedorVista
+﻿namespace SistemasVentas.VISTA.ProvedorVista
 {
-    partial class VendedorListarVista
+    partial class ProvedorListarVista
     {
         /// <summary>
         /// Required designer variable.
@@ -28,23 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VendedorListarVista));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProvedorListarVista));
             panel1 = new Panel();
             pictureBox1 = new PictureBox();
             label2 = new Label();
-            panel2 = new Panel();
             panel3 = new Panel();
-            button1 = new Button();
-            button2 = new Button();
             button3 = new Button();
-            button4 = new Button();
+            button2 = new Button();
+            button1 = new Button();
+            panel2 = new Panel();
             dataGridView1 = new DataGridView();
-            button15 = new Button();
-            button5 = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            panel2.SuspendLayout();
             panel3.SuspendLayout();
+            panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -53,10 +50,10 @@
             panel1.BackColor = Color.Teal;
             panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(label2);
-            panel1.Location = new Point(2, 1);
+            panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(803, 65);
-            panel1.TabIndex = 3;
+            panel1.TabIndex = 4;
             // 
             // pictureBox1
             // 
@@ -80,72 +77,58 @@
             label2.TabIndex = 12;
             label2.Text = "SISTEMA DE VENTAS";
             // 
-            // panel2
-            // 
-            panel2.BackColor = Color.FromArgb(192, 255, 255);
-            panel2.Controls.Add(button5);
-            panel2.Controls.Add(button15);
-            panel2.Controls.Add(dataGridView1);
-            panel2.Location = new Point(2, 108);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(803, 343);
-            panel2.TabIndex = 4;
-            // 
             // panel3
             // 
             panel3.BackColor = Color.FromArgb(128, 255, 255);
-            panel3.Controls.Add(button4);
             panel3.Controls.Add(button3);
             panel3.Controls.Add(button2);
             panel3.Controls.Add(button1);
-            panel3.Location = new Point(2, 59);
+            panel3.Location = new Point(0, 58);
             panel3.Name = "panel3";
-            panel3.Size = new Size(803, 49);
-            panel3.TabIndex = 5;
-            // 
-            // button1
-            // 
-            button1.BackColor = Color.CadetBlue;
-            button1.ForeColor = SystemColors.ControlLightLight;
-            button1.Location = new Point(41, 13);
-            button1.Name = "button1";
-            button1.Size = new Size(113, 23);
-            button1.TabIndex = 14;
-            button1.Text = "CLIENTE";
-            button1.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            button2.BackColor = Color.CadetBlue;
-            button2.ForeColor = SystemColors.ControlLightLight;
-            button2.Location = new Point(218, 13);
-            button2.Name = "button2";
-            button2.Size = new Size(113, 23);
-            button2.TabIndex = 15;
-            button2.Text = "PRODUCTO";
-            button2.UseVisualStyleBackColor = false;
+            panel3.Size = new Size(803, 48);
+            panel3.TabIndex = 6;
             // 
             // button3
             // 
             button3.BackColor = Color.CadetBlue;
             button3.ForeColor = SystemColors.ControlLightLight;
-            button3.Location = new Point(395, 13);
+            button3.Location = new Point(546, 13);
             button3.Name = "button3";
             button3.Size = new Size(113, 23);
             button3.TabIndex = 16;
-            button3.Text = "VENTA";
+            button3.Text = "INGRESO";
             button3.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // button2
             // 
-            button4.BackColor = Color.CadetBlue;
-            button4.ForeColor = SystemColors.ControlLightLight;
-            button4.Location = new Point(588, 13);
-            button4.Name = "button4";
-            button4.Size = new Size(113, 23);
-            button4.TabIndex = 17;
-            button4.Text = "DETALLE INGRESO";
-            button4.UseVisualStyleBackColor = false;
+            button2.BackColor = Color.CadetBlue;
+            button2.ForeColor = SystemColors.ControlLightLight;
+            button2.Location = new Point(321, 13);
+            button2.Name = "button2";
+            button2.Size = new Size(113, 23);
+            button2.TabIndex = 15;
+            button2.Text = "PROVEE";
+            button2.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.CadetBlue;
+            button1.ForeColor = SystemColors.ControlLightLight;
+            button1.Location = new Point(97, 13);
+            button1.Name = "button1";
+            button1.Size = new Size(113, 23);
+            button1.TabIndex = 14;
+            button1.Text = "PRODUCTO";
+            button1.UseVisualStyleBackColor = false;
+            // 
+            // panel2
+            // 
+            panel2.BackColor = Color.FromArgb(192, 255, 255);
+            panel2.Controls.Add(dataGridView1);
+            panel2.Location = new Point(0, 100);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(803, 355);
+            panel2.TabIndex = 7;
             // 
             // dataGridView1
             // 
@@ -156,48 +139,24 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(772, 261);
+            dataGridView1.Size = new Size(772, 322);
             dataGridView1.TabIndex = 15;
             // 
-            // button15
-            // 
-            button15.BackColor = SystemColors.MenuHighlight;
-            button15.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            button15.ForeColor = SystemColors.ControlLightLight;
-            button15.Location = new Point(182, 296);
-            button15.Name = "button15";
-            button15.Size = new Size(149, 34);
-            button15.TabIndex = 18;
-            button15.Text = "VENDER";
-            button15.UseVisualStyleBackColor = false;
-            // 
-            // button5
-            // 
-            button5.BackColor = SystemColors.MenuHighlight;
-            button5.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            button5.ForeColor = SystemColors.ControlLightLight;
-            button5.Location = new Point(438, 296);
-            button5.Name = "button5";
-            button5.Size = new Size(149, 34);
-            button5.TabIndex = 19;
-            button5.Text = "CANCELAR";
-            button5.UseVisualStyleBackColor = false;
-            // 
-            // VendedorListarVista
+            // ProvedorListarVista
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(panel3);
             Controls.Add(panel2);
+            Controls.Add(panel3);
             Controls.Add(panel1);
-            Name = "VendedorListarVista";
-            Text = "VendedorListarVista";
+            Name = "ProvedorListarVista";
+            Text = "ProvedorListarVista";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            panel2.ResumeLayout(false);
             panel3.ResumeLayout(false);
+            panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
@@ -207,14 +166,11 @@
         private Panel panel1;
         private PictureBox pictureBox1;
         private Label label2;
-        private Panel panel2;
         private Panel panel3;
-        private Button button4;
         private Button button3;
         private Button button2;
         private Button button1;
+        private Panel panel2;
         private DataGridView dataGridView1;
-        private Button button5;
-        private Button button15;
     }
 }

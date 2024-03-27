@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SistemasVentas.VISTA.SistemaVentaVista
+namespace SistemasVentas.VISTA.VendedorVista
 {
-    public partial class SistemaVentaInicioVista : Form
+    public partial class VendedorProductoListarVista : Form
     {
-        public SistemaVentaInicioVista()
+        public VendedorProductoListarVista()
         {
             InitializeComponent();
         }
