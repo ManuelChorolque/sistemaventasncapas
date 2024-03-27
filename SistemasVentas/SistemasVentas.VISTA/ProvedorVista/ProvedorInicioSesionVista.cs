@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SistemasVentas.VISTA.GerenteVista;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,12 @@ namespace SistemasVentas.VISTA.ProvedorVista
         public ProvedorInicioSesionVista()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ProvedorListarVista listarVista = new ProvedorListarVista();
+            listarVista.Show();
         }
     }
 }

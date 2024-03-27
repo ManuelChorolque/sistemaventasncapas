@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SistemasVentas.BSS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,12 @@ namespace SistemasVentas.VISTA.ProvedorVista
         public ProvedorListarVista()
         {
             InitializeComponent();
+        }
+
+        private void ProvedorListarVista_Load(object sender, EventArgs e)
+        {
+            ProductoBss bss = new ProductoBss();
+            dataGridView1.DataSource = bss.ListarProductoBss();
         }
     }
 }

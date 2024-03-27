@@ -101,13 +101,16 @@
             button1.TabIndex = 16;
             button1.Text = "INGRESAR";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // textBox2
             // 
             textBox2.Location = new Point(27, 315);
             textBox2.Name = "textBox2";
+            textBox2.PasswordChar = '*';
             textBox2.Size = new Size(288, 23);
             textBox2.TabIndex = 15;
+            textBox2.UseSystemPasswordChar = true;
             // 
             // textBox1
             // 

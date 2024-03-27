@@ -139,6 +139,7 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.RowTemplate.Height = 25;
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView1.Size = new Size(772, 322);
             dataGridView1.TabIndex = 15;
             // 
@@ -152,6 +153,7 @@
             Controls.Add(panel1);
             Name = "ProvedorListarVista";
             Text = "ProvedorListarVista";
+            Load += ProvedorListarVista_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

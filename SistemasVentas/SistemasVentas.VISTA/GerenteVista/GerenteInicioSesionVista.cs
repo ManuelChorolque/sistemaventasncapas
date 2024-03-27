@@ -16,5 +16,11 @@ namespace SistemasVentas.VISTA.GerenteVista
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            GerenteListarVista listarVista = new GerenteListarVista();
+            listarVista.Show();
+        }
     }
 }

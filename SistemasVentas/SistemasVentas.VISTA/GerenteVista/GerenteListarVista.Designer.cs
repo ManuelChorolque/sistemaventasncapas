@@ -30,10 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GerenteListarVista));
             panel2 = new Panel();
+            dataGridView1 = new DataGridView();
             button17 = new Button();
             button16 = new Button();
             button15 = new Button();
-            dataGridView1 = new DataGridView();
             panel3 = new Panel();
             button14 = new Button();
             button13 = new Button();
@@ -62,15 +62,28 @@
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(192, 255, 255);
+            panel2.Controls.Add(dataGridView1);
             panel2.Controls.Add(button17);
             panel2.Controls.Add(button16);
             panel2.Controls.Add(button15);
-            panel2.Controls.Add(dataGridView1);
             panel2.Controls.Add(panel3);
             panel2.Location = new Point(-1, 59);
             panel2.Name = "panel2";
             panel2.Size = new Size(803, 469);
             panel2.TabIndex = 3;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.AllowUserToDeleteRows = false;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(153, 13);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.ReadOnly = true;
+            dataGridView1.RowTemplate.Height = 25;
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridView1.Size = new Size(636, 401);
+            dataGridView1.TabIndex = 20;
             // 
             // button17
             // 
@@ -108,18 +121,6 @@
             button15.Text = "AGREGAR";
             button15.UseVisualStyleBackColor = false;
             // 
-            // dataGridView1
-            // 
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.AllowUserToDeleteRows = false;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(164, 13);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.ReadOnly = true;
-            dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(625, 379);
-            dataGridView1.TabIndex = 14;
-            // 
             // panel3
             // 
             panel3.BackColor = Color.FromArgb(128, 255, 255);
@@ -152,6 +153,7 @@
             button14.TabIndex = 26;
             button14.Text = "DETALLE INGRESO";
             button14.UseVisualStyleBackColor = false;
+            button14.Click += button14_Click;
             // 
             // button13
             // 
@@ -163,6 +165,7 @@
             button13.TabIndex = 17;
             button13.Text = "DETALLE VENTA";
             button13.UseVisualStyleBackColor = false;
+            button13.Click += button13_Click;
             // 
             // button12
             // 
@@ -174,6 +177,7 @@
             button12.TabIndex = 25;
             button12.Text = "PROVEE";
             button12.UseVisualStyleBackColor = false;
+            button12.Click += button12_Click;
             // 
             // button11
             // 
@@ -185,6 +189,7 @@
             button11.TabIndex = 24;
             button11.Text = "PRODUCTO";
             button11.UseVisualStyleBackColor = false;
+            button11.Click += button11_Click;
             // 
             // button10
             // 
@@ -196,6 +201,7 @@
             button10.TabIndex = 23;
             button10.Text = "VENTA";
             button10.UseVisualStyleBackColor = false;
+            button10.Click += button10_Click;
             // 
             // button9
             // 
@@ -207,6 +213,7 @@
             button9.TabIndex = 22;
             button9.Text = "INGRESO";
             button9.UseVisualStyleBackColor = false;
+            button9.Click += button9_Click;
             // 
             // button8
             // 
@@ -218,6 +225,7 @@
             button8.TabIndex = 21;
             button8.Text = "CLIENTE";
             button8.UseVisualStyleBackColor = false;
+            button8.Click += button8_Click;
             // 
             // button7
             // 
@@ -229,6 +237,7 @@
             button7.TabIndex = 20;
             button7.Text = "USUARIO ROL";
             button7.UseVisualStyleBackColor = false;
+            button7.Click += button7_Click;
             // 
             // button6
             // 
@@ -240,6 +249,7 @@
             button6.TabIndex = 19;
             button6.Text = "USUARIO";
             button6.UseVisualStyleBackColor = false;
+            button6.Click += button6_Click;
             // 
             // button5
             // 
@@ -251,6 +261,7 @@
             button5.TabIndex = 18;
             button5.Text = "PROVEEDOR";
             button5.UseVisualStyleBackColor = false;
+            button5.Click += button5_Click;
             // 
             // button4
             // 
@@ -262,6 +273,7 @@
             button4.TabIndex = 16;
             button4.Text = "MARCA";
             button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click;
             // 
             // button3
             // 
@@ -273,6 +285,7 @@
             button3.TabIndex = 15;
             button3.Text = "TIPO PRODUCTO";
             button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // button2
             // 
@@ -284,6 +297,7 @@
             button2.TabIndex = 14;
             button2.Text = "ROL";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // button1
             // 
@@ -295,6 +309,7 @@
             button1.TabIndex = 13;
             button1.Text = "PERSONA";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // panel1
             // 
@@ -337,6 +352,7 @@
             Controls.Add(panel1);
             Name = "GerenteListarVista";
             Text = "GerenteListarVista";
+            Load += GerenteListarVista_Load;
             panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             panel3.ResumeLayout(false);
@@ -367,9 +383,9 @@
         private Button button3;
         private Button button2;
         private Button button1;
-        private DataGridView dataGridView1;
         private Button button17;
         private Button button16;
         private Button button15;
+        private DataGridView dataGridView1;
     }
 }
