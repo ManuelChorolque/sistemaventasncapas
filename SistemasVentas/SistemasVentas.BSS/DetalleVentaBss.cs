@@ -29,5 +29,9 @@ namespace SistemasVentas.BSS
             dal.EliminarDetalleVentaDal(id);
 
         }
+        public DataTable DetalleVentaDatosBss()
+        {
+            return dal.DetalleVentaDatosDal();
+        }
     }
 }

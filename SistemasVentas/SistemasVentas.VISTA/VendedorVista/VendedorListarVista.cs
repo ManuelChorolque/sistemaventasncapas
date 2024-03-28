@@ -21,31 +21,31 @@ namespace SistemasVentas.VISTA.VendedorVista
         private void VendedorListarVista_Load(object sender, EventArgs e)
         {
             ClienteBss bss = new ClienteBss();
-            dataGridView1.DataSource = bss.ListarClienteBss();
+            dataGridView1.DataSource = bss.ClienteDatosBss();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             ClienteBss bss = new ClienteBss();
-            dataGridView1.DataSource = bss.ListarClienteBss();
+            dataGridView1.DataSource = bss.ClienteDatosBss();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             ProductoBss bss = new ProductoBss();
-            dataGridView1.DataSource = bss.ListarProductoBss();
+            dataGridView1.DataSource = bss.ProductoDatosBss();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             VentaBss bss = new VentaBss();
-            dataGridView1.DataSource = bss.ListarVentaBss();
+            dataGridView1.DataSource = bss.VentaDatosBss();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             DetalleIngBss bss = new DetalleIngBss();
-            dataGridView1.DataSource = bss.ListarDetalleIngBss();
+            dataGridView1.DataSource = bss.DetalleIngDatosBss();
         }
     }
 }

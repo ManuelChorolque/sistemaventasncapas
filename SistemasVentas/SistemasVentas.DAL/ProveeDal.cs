@@ -56,5 +56,12 @@ namespace SistemasVentas.DAL
             string consulta = "delete from provee where idprovee=" + id;
             conexion.Ejecutar(consulta);
         }
+        public DataTable ProveeDatosDal()
+        {
+            string consulta = "SELECT PROVEE.IDPROVEE, PRODUCTO.NOMBRE NOMBREPRODUCTO, PRODUCTO.UNIDAD, PROVEEDOR.NOMBRE AS NOMBREPROVEEDOR, PROVEEDOR.TELEFONO, PROVEE.FECHA, PROVEE.PRECIO " +
+                              "FROM PROVEE INNER JOIN PRODUCTO ON PROVEE.IDPRODUCTO = PRODUCTO.IDPRODUCTO INNER JOIN " +
+                              "PROVEEDOR ON PROVEE.IDPROVEEDOR = PROVEEDOR.IDPROVEEDOR";
+            return conexion.EjecutarDataTabla(consulta, "fsdf");
+        }
     }
 }

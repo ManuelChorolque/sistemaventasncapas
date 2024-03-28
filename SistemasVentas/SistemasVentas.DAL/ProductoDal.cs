@@ -63,5 +63,12 @@ namespace SistemasVentas.DAL
             string consulta = "delete from producto where idproducto=" + id;
             conexion.Ejecutar(consulta);
         }
+        public DataTable ProductoDatosDal()
+        {
+            string consulta = "SELECT PRODUCTO.IDPRODUCTO, TIPOPROD.NOMBRE TIPOPRODUCTO, PRODUCTO.NOMBRE AS PRODUCTO, PRODUCTO.CODIGOBARRA, MARCA.NOMBRE AS NOMBREMARCA, PRODUCTO.UNIDAD, PRODUCTO.DESCRIPCION, PRODUCTO.ESTADO " +
+                              "FROM PRODUCTO INNER JOIN TIPOPROD ON PRODUCTO.IDTIPOPROD = TIPOPROD.IDTIPOPROD INNER JOIN " +
+                              "MARCA ON PRODUCTO.IDMARCA = MARCA.IDMARCA";
+            return conexion.EjecutarDataTabla(consulta, "fsdf");
+        }
     }
 }

@@ -65,5 +65,13 @@ namespace SistemasVentas.DAL
             string consulta = "delete from detalleing where iddetalleing=" + id;
             conexion.Ejecutar(consulta);
         }
+        public DataTable DetalleIngDatosDal()
+        {
+            string consulta = "SELECT DETALLEING.IDDETALLEING, PRODUCTO.NOMBRE NOMBREPRODUCTO, INGRESO.FECHAINGRESO, PRODUCTO.CODIGOBARRA, PRODUCTO.UNIDAD, INGRESO.TOTAL, DETALLEING.CANTIDAD, DETALLEING.PRECIOCOSTO, " +
+                              "DETALLEING.PRECIOVENTA, DETALLEING.SUBTOTAL, DETALLEING.ESTADO " +
+                              "FROM DETALLEING INNER JOIN PRODUCTO ON DETALLEING.IDPRODUCTO = PRODUCTO.IDPRODUCTO INNER JOIN " +
+                              "INGRESO ON DETALLEING.IDINGRESO = INGRESO.IDINGRESO";
+            return conexion.EjecutarDataTabla(consulta, "fsdf");
+        }
     }
 }

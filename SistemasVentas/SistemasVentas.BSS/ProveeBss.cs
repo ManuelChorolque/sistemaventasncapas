@@ -33,5 +33,9 @@ namespace SistemasVentas.BSS
             dal.EliminarProveeDal(id);
 
         }
+        public DataTable ProveeDatosBss()
+        {
+            return dal.ProveeDatosDal();
+        }
     }
 }

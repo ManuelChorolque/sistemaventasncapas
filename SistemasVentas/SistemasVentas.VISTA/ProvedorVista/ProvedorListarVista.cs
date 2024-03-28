@@ -21,7 +21,25 @@ namespace SistemasVentas.VISTA.ProvedorVista
         private void ProvedorListarVista_Load(object sender, EventArgs e)
         {
             ProductoBss bss = new ProductoBss();
-            dataGridView1.DataSource = bss.ListarProductoBss();
+            dataGridView1.DataSource = bss.ProductoDatosBss();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ProductoBss bss = new ProductoBss();
+            dataGridView1.DataSource = bss.ProductoDatosBss();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ProveeBss bss = new ProveeBss();
+            dataGridView1.DataSource = bss.ProveeDatosBss();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            IngresoBss bss = new IngresoBss();
+            dataGridView1.DataSource = bss.IngresoDatosBss();
         }
     }
 }

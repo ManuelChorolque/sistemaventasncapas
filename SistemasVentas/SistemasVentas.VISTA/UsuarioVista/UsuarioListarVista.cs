@@ -25,7 +25,7 @@ namespace SistemasVentas.VISTA.UsuarioVista
         UsuarioBss bss = new UsuarioBss();
         private void UsuarioListarVista_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = bss.ListarUsuarioBss();
+            dataGridView1.DataSource = bss.UsuarioDatosBss();
         }
 
         private void button1_Click(object sender, EventArgs e)

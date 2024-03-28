@@ -33,5 +33,9 @@ namespace SistemasVentas.BSS
             dal.EliminarDetalleIngDal(id);
 
         }
+        public DataTable DetalleIngDatosBss()
+        {
+            return dal.DetalleIngDatosDal();
+        }
     }
 }

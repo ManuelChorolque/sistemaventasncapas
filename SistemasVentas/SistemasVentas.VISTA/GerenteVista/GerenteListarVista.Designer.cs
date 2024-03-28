@@ -120,6 +120,7 @@
             button15.TabIndex = 17;
             button15.Text = "AGREGAR";
             button15.UseVisualStyleBackColor = false;
+            button15.Click += button15_Click;
             // 
             // panel3
             // 
