@@ -1,6 +1,6 @@
 ﻿using SistemasVentas.BSS;
 using SistemasVentas.VISTA.PersonaVista;
-using SistemasVentas.VISTA.UsuarioRolVistas;
+using SistemasVentas.VISTA.UsuarioRolVista;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

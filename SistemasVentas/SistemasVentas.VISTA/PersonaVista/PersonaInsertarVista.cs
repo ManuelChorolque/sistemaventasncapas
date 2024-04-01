@@ -18,14 +18,15 @@ namespace SistemasVentas.VISTA.PersonaVista
         {
             InitializeComponent();
         }
-        PersonaBss bss=new PersonaBss();
+        PersonaBss bss = new PersonaBss();
         private void button1_Click(object sender, EventArgs e)
         {
-            Persona p=new Persona();
+            
+            Persona p = new Persona();
             p.Nombre = textBox1.Text;
             p.Apellido = textBox2.Text;
             p.Telefono = textBox3.Text;
-            p.Ci= textBox4.Text;
+            p.Ci = textBox4.Text;
             p.Correo = textBox5.Text;
 
             bss.InsertarPersonaBss(p);

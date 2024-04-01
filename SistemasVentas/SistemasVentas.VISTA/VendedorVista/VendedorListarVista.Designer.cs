@@ -114,6 +114,7 @@
             button15.TabIndex = 18;
             button15.Text = "VENDER";
             button15.UseVisualStyleBackColor = false;
+            button15.Click += button15_Click;
             // 
             // dataGridView1
             // 

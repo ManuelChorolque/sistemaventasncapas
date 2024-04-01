@@ -1,7 +1,7 @@
 ﻿using SistemasVentas.BSS;
 using SistemasVentas.VISTA.PersonaVista;
-using SistemasVentas.VISTA.ProductoVistas;
-using SistemasVentas.VISTA.UsuarioRolVistas;
+using SistemasVentas.VISTA.ProductoVista;
+using SistemasVentas.VISTA.UsuarioRolVista;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -28,7 +28,7 @@ namespace SistemasVentas.VISTA.TipoProdVista
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ProductoInsertarVistas.IdTipoProdSeleccionado = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            ProductoInsertarVista.IdTipoProdSeleccionado = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
         }
 
         private void button2_Click(object sender, EventArgs e)

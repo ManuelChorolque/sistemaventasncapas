@@ -45,7 +45,7 @@
             // button2
             // 
             button2.DialogResult = DialogResult.Cancel;
-            button2.Location = new Point(530, 355);
+            button2.Location = new Point(345, 348);
             button2.Name = "button2";
             button2.Size = new Size(75, 23);
             button2.TabIndex = 23;
@@ -55,7 +55,7 @@
             // button1
             // 
             button1.DialogResult = DialogResult.OK;
-            button1.Location = new Point(369, 355);
+            button1.Location = new Point(189, 348);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 22;
@@ -65,35 +65,35 @@
             // 
             // textBox5
             // 
-            textBox5.Location = new Point(265, 236);
+            textBox5.Location = new Point(136, 276);
             textBox5.Name = "textBox5";
             textBox5.Size = new Size(381, 23);
             textBox5.TabIndex = 21;
             // 
             // textBox4
             // 
-            textBox4.Location = new Point(265, 195);
+            textBox4.Location = new Point(136, 235);
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(381, 23);
             textBox4.TabIndex = 20;
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(265, 154);
+            textBox3.Location = new Point(136, 194);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(381, 23);
             textBox3.TabIndex = 19;
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(265, 113);
+            textBox2.Location = new Point(136, 153);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(381, 23);
             textBox2.TabIndex = 18;
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(265, 72);
+            textBox1.Location = new Point(136, 112);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(381, 23);
             textBox1.TabIndex = 17;
@@ -101,7 +101,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(167, 244);
+            label5.Location = new Point(38, 284);
             label5.Name = "label5";
             label5.Size = new Size(53, 15);
             label5.TabIndex = 16;
@@ -110,7 +110,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(202, 203);
+            label4.Location = new Point(73, 243);
             label4.Name = "label4";
             label4.Size = new Size(18, 15);
             label4.TabIndex = 15;
@@ -119,7 +119,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(156, 162);
+            label3.Location = new Point(27, 202);
             label3.Name = "label3";
             label3.Size = new Size(64, 15);
             label3.TabIndex = 14;
@@ -128,7 +128,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(154, 121);
+            label2.Location = new Point(25, 161);
             label2.Name = "label2";
             label2.Size = new Size(66, 15);
             label2.TabIndex = 13;
@@ -137,7 +137,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(164, 80);
+            label1.Location = new Point(35, 120);
             label1.Name = "label1";
             label1.Size = new Size(56, 15);
             label1.TabIndex = 12;
@@ -147,7 +147,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(570, 410);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(textBox5);

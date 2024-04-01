@@ -28,121 +28,146 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.SuspendLayout();
+            label1 = new Label();
+            label2 = new Label();
+            label3 = new Label();
+            label4 = new Label();
+            textBox1 = new TextBox();
+            textBox2 = new TextBox();
+            textBox4 = new TextBox();
+            button1 = new Button();
+            button2 = new Button();
+            dateTimePicker1 = new DateTimePicker();
+            button3 = new Button();
+            button4 = new Button();
+            SuspendLayout();
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(108, 108);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "IDCLIENTE";
+            label1.AutoSize = true;
+            label1.Location = new Point(119, 108);
+            label1.Name = "label1";
+            label1.Size = new Size(51, 15);
+            label1.TabIndex = 0;
+            label1.Text = "CLIENTE";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(92, 155);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 15);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "IDVENDEDOR";
+            label2.AutoSize = true;
+            label2.Location = new Point(103, 156);
+            label2.Name = "label2";
+            label2.Size = new Size(67, 15);
+            label2.TabIndex = 1;
+            label2.Text = "VENDEDOR";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(126, 205);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 15);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "FECHA";
+            label3.AutoSize = true;
+            label3.Location = new Point(126, 205);
+            label3.Name = "label3";
+            label3.Size = new Size(44, 15);
+            label3.TabIndex = 2;
+            label3.Text = "FECHA";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(131, 251);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(39, 15);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "TOTAL";
+            label4.AutoSize = true;
+            label4.Location = new Point(131, 251);
+            label4.Name = "label4";
+            label4.Size = new Size(39, 15);
+            label4.TabIndex = 3;
+            label4.Text = "TOTAL";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(218, 100);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(422, 23);
-            this.textBox1.TabIndex = 4;
+            textBox1.Location = new Point(218, 100);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(322, 23);
+            textBox1.TabIndex = 4;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(218, 152);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(422, 23);
-            this.textBox2.TabIndex = 5;
+            textBox2.Location = new Point(218, 152);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(322, 23);
+            textBox2.TabIndex = 5;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(218, 243);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(422, 23);
-            this.textBox4.TabIndex = 7;
+            textBox4.Location = new Point(218, 243);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(422, 23);
+            textBox4.TabIndex = 7;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(269, 311);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "GUARDAR";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            button1.DialogResult = DialogResult.OK;
+            button1.Location = new Point(269, 311);
+            button1.Name = "button1";
+            button1.Size = new Size(75, 23);
+            button1.TabIndex = 8;
+            button1.Text = "GUARDAR";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(444, 311);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "CANCELAR";
-            this.button2.UseVisualStyleBackColor = true;
+            button2.DialogResult = DialogResult.Cancel;
+            button2.Location = new Point(444, 311);
+            button2.Name = "button2";
+            button2.Size = new Size(75, 23);
+            button2.TabIndex = 9;
+            button2.Text = "CANCELAR";
+            button2.UseVisualStyleBackColor = true;
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(218, 199);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(422, 23);
-            this.dateTimePicker1.TabIndex = 10;
+            dateTimePicker1.Location = new Point(218, 199);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(422, 23);
+            dateTimePicker1.TabIndex = 10;
+            // 
+            // button3
+            // 
+            button3.Location = new Point(546, 100);
+            button3.Name = "button3";
+            button3.Size = new Size(94, 23);
+            button3.TabIndex = 11;
+            button3.Text = "SELECCIONAR";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
+            // button4
+            // 
+            button4.Location = new Point(546, 152);
+            button4.Name = "button4";
+            button4.Size = new Size(94, 23);
+            button4.TabIndex = 12;
+            button4.Text = "SELECCIONAR";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // VentaInsertarVista
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Name = "VentaInsertarVista";
-            this.Text = "VentaInsertarVista";
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(button4);
+            Controls.Add(button3);
+            Controls.Add(dateTimePicker1);
+            Controls.Add(button2);
+            Controls.Add(button1);
+            Controls.Add(textBox4);
+            Controls.Add(textBox2);
+            Controls.Add(textBox1);
+            Controls.Add(label4);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Name = "VentaInsertarVista";
+            Text = "VentaInsertarVista";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -157,5 +182,7 @@
         private Button button1;
         private Button button2;
         private DateTimePicker dateTimePicker1;
+        private Button button3;
+        private Button button4;
     }
 }

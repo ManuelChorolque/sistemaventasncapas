@@ -1,5 +1,4 @@
 ﻿using SistemasVentas.BSS;
-using SistemasVentas.VISTA.UsuarioVistas;
 using SistemasVentas.VISTA.UsuarioVista;
 using System;
 using System.Collections.Generic;
@@ -10,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using SistemasVentas.VISTA.ClienteVistas;
+using SistemasVentas.VISTA.ClienteVista;
 
 namespace SistemasVentas.VISTA.PersonaVista
 {
@@ -28,9 +27,10 @@ namespace SistemasVentas.VISTA.PersonaVista
 
         private void button1_Click(object sender, EventArgs e)
         {
-            UsuarioInsertarVistas.IdPersonaSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
-            ClienteInsertarVistas.IdPersonaSeleccionada= Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
-            
+            UsuarioInsertarVista.IdPersonaSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            ClienteInsertarVista.IdPersonaSeleccionada= Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            UsuarioEditarVista.IdPersonaSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            ClienteEditarVista.IdPersonaSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
         }
 
         private void button2_Click(object sender, EventArgs e)

@@ -13,7 +13,7 @@ namespace SistemasVentas.DAL
 
 		public static string CONECTAR
 		{
-            get { return @"Data Source=PCA-17; Initial Catalog=TIENDABD; Integrated Security=True; TrustServerCertificate=true;"; }
+            get { return @"Data Source=DESKTOP-DCIJA7S; Initial Catalog=TIENDABD; Integrated Security=True; TrustServerCertificate=true;"; }
             //get { return ConfigurationManager.ConnectionStrings["cadena"].ToString(); }
         }
 		public static DataSet EjecutarDataSet(string consulta)
@@ -60,21 +60,21 @@ namespace SistemasVentas.DAL
 			da.Fill(dt);
 			return dt;
 		}
-		public static bool VerificadorCredenciales(string usuario, string contraseña)
-		{
-			string consulta = "SELECT COUNT(1) FROM usuario WHERE nombreuser=@Usuario AND contraseña=@Contraseña";
-			using (SqlConnection conectar=new SqlConnection(CONECTAR))
-			{
-				conectar.Open();
-				SqlCommand cmd = new SqlCommand(consulta, conectar);
-				cmd.Parameters.AddWithValue("@Usuario",usuario);
-				cmd.Parameters.AddWithValue("@Contraseña",contraseña);
+		//public static bool VerificadorCredenciales(string usuario, string contraseña)
+		//{
+		//	string consulta = "SELECT COUNT(1) FROM usuario WHERE nombreuser=@Usuario AND contraseña=@Contraseña";
+		//	using (SqlConnection conectar=new SqlConnection(CONECTAR))
+		//	{
+		//		conectar.Open();
+		//		SqlCommand cmd = new SqlCommand(consulta, conectar);
+		//		cmd.Parameters.AddWithValue("@Usuario",usuario);
+		//		cmd.Parameters.AddWithValue("@Contraseña",contraseña);
 
-				int count = Convert.ToInt32(cmd.ExecuteScalar());
-				return count == 1;
+		//		int count = Convert.ToInt32(cmd.ExecuteScalar());
+		//		return count == 1;
 
-			}
-		}
+		//	}
+		//}
       
 
     }

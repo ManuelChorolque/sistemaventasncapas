@@ -47,7 +47,7 @@ namespace SistemasVentas.DAL
         {
             string consulta = "update venta set idcliente=" + v.IdCliente + "," +
                                                   "idvendedor=" + v.IdVendedor + "," +
-                                                  "fecha='" + v.Fecha + "'," +
+                                                  "fecha='" + v.Fecha.ToString("yyyy-MM-dd HH:mm:ss") + "'," +
                                                   "total=" + v.Total + "" +
                                               "where idventa=" + v.IdVenta;
             conexion.Ejecutar(consulta);

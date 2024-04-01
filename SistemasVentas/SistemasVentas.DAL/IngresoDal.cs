@@ -44,7 +44,7 @@ namespace SistemasVentas.DAL
         public void EditarIngresoDal(Ingreso i)
         {
             string consulta = "update ingreso set idproveedor=" + i.IdProveedor + "," +
-                                                  "fechaingreso='" + i.FechaIngreso + "'," +
+                                                  "fechaingreso='" + i.FechaIngreso.ToString("yyyy-MM-dd HH:mm:ss") + "'," +
                                                   "total=" + i.Total + "" +
                                               "where idingreso=" + i.IdIngreso;
             conexion.Ejecutar(consulta);
@@ -56,7 +56,7 @@ namespace SistemasVentas.DAL
         }
         public DataTable IngresoDatosDal()
         {
-            string consulta = "SELECT        INGRESO.IDINGRESO, PROVEEDOR.NOMBRE NOMBREPROVEEDOR, PROVEEDOR.TELEFONO, INGRESO.FECHAINGRESO, INGRESO.TOTAL, INGRESO.ESTADO " +
+            string consulta = "SELECT INGRESO.IDINGRESO, PROVEEDOR.NOMBRE NOMBREPROVEEDOR, INGRESO.FECHAINGRESO, INGRESO.TOTAL, INGRESO.ESTADO " +
                               "FROM INGRESO INNER JOIN PROVEEDOR ON INGRESO.IDPROVEEDOR = PROVEEDOR.IDPROVEEDOR";
             return conexion.EjecutarDataTabla(consulta, "fsdf");
         }

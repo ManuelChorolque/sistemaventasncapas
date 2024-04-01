@@ -1,5 +1,6 @@
 ﻿using SistemasVentas.BSS;
 using SistemasVentas.Modelos;
+using SistemasVentas.VISTA.PersonaVista;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,11 +19,22 @@ namespace SistemasVentas.VISTA.UsuarioVista
         {
             InitializeComponent();
         }
-        UsuarioBss bss = new UsuarioBss();
+        public static int IdPersonaSeleccionada = 0;
+        private void button3_Click(object sender, EventArgs e)
+        {
+            PersonaBss bss = new PersonaBss();
+            PersonaListarVista fr = new PersonaListarVista();
+            if (fr.ShowDialog() == DialogResult.OK)
+            {
+                Persona persona = bss.ObtenerIdBss(IdPersonaSeleccionada);
+                textBox1.Text = persona.Nombre + " " + persona.Apellido;
+            }
+        }
         private void button1_Click(object sender, EventArgs e)
         {
+            UsuarioBss bss = new UsuarioBss();
             Usuario u = new Usuario();
-            u.IdPersona = Convert.ToInt32(textBox1.Text);
+            u.IdPersona = IdPersonaSeleccionada;
             u.NombreUser = textBox2.Text;
             u.Contraseña = textBox3.Text;
             u.FechaReg = dateTimePicker1.Value;
@@ -30,5 +42,6 @@ namespace SistemasVentas.VISTA.UsuarioVista
             bss.InsertarUsuarioBss(u);
             MessageBox.Show("se guardo correctamente el usuario");
         }
+        
     }
 }

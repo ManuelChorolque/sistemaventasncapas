@@ -1,5 +1,5 @@
 ﻿using SistemasVentas.BSS;
-using SistemasVentas.VISTA.VentaVistas;
+using SistemasVentas.VISTA.VentaVista;
 using SistemasVentas.VISTA;
 using System;
 using System.Collections.Generic;
@@ -10,9 +10,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using SistemasVentas.VISTA.ProveeVistas;
-using SistemasVentas.VISTA.DetalleVentaVistas;
-using SistemasVentas.VISTA.DetalleIngVistas;
+using SistemasVentas.VISTA.DetalleVentaVista;
+using SistemasVentas.VISTA.DetalleIngVista;
+using SistemasVentas.VISTA.ProveeVista;
 
 namespace SistemasVentas.VISTA.ProductoVista
 {
@@ -30,9 +30,9 @@ namespace SistemasVentas.VISTA.ProductoVista
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ProveeInsertarVistas.IdProductoSeleccionado = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
-            DetalleVentaInsertarVistas.IdProductoSeleccionado = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
-            DetalleIngInsertarVistas.IdProductoSeleccionado = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            ProveeInsertarVista.IdProductoSeleccionado = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            DetalleVentaInsertarVista.IdProductoSeleccionado = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            DetalleIngInsertarVista.IdProductoSeleccionado = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
         }
     }
 }

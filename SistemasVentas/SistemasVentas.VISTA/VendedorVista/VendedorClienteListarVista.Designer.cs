@@ -1,6 +1,6 @@
 ﻿namespace SistemasVentas.VISTA.VendedorVista
 {
-    partial class VendedorProductoListarVista
+    partial class VendedorClienteListarVista
     {
         /// <summary>
         /// Required designer variable.
@@ -28,25 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            panel2 = new Panel();
             label2 = new Label();
             panel1 = new Panel();
             button1 = new Button();
             button3 = new Button();
             dataGridView1 = new DataGridView();
-            panel2.SuspendLayout();
+            panel2 = new Panel();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            panel2.SuspendLayout();
             SuspendLayout();
-            // 
-            // panel2
-            // 
-            panel2.BackColor = Color.Teal;
-            panel2.Controls.Add(label2);
-            panel2.Location = new Point(2, 0);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(395, 90);
-            panel2.TabIndex = 2;
             // 
             // label2
             // 
@@ -54,11 +45,11 @@
             label2.BackColor = Color.Teal;
             label2.Font = new Font("Segoe UI Black", 24F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(24, 22);
+            label2.Location = new Point(3, 12);
             label2.Name = "label2";
-            label2.Size = new Size(367, 45);
-            label2.TabIndex = 13;
-            label2.Text = "LISTA DE PRODUCTOS";
+            label2.Size = new Size(318, 45);
+            label2.TabIndex = 14;
+            label2.Text = "LISTA DE CLIENTES";
             // 
             // panel1
             // 
@@ -66,10 +57,10 @@
             panel1.Controls.Add(button1);
             panel1.Controls.Add(button3);
             panel1.Controls.Add(dataGridView1);
-            panel1.Location = new Point(2, 87);
+            panel1.Location = new Point(0, 57);
             panel1.Name = "panel1";
-            panel1.Size = new Size(395, 364);
-            panel1.TabIndex = 3;
+            panel1.Size = new Size(560, 351);
+            panel1.TabIndex = 15;
             // 
             // button1
             // 
@@ -77,9 +68,9 @@
             button1.DialogResult = DialogResult.Cancel;
             button1.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             button1.ForeColor = SystemColors.ControlLightLight;
-            button1.Location = new Point(206, 299);
+            button1.Location = new Point(291, 299);
             button1.Name = "button1";
-            button1.Size = new Size(129, 34);
+            button1.Size = new Size(136, 34);
             button1.TabIndex = 19;
             button1.Text = "CANCELAR";
             button1.UseVisualStyleBackColor = false;
@@ -90,9 +81,9 @@
             button3.DialogResult = DialogResult.OK;
             button3.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             button3.ForeColor = SystemColors.ControlLightLight;
-            button3.Location = new Point(54, 299);
+            button3.Location = new Point(114, 299);
             button3.Name = "button3";
-            button3.Size = new Size(121, 34);
+            button3.Size = new Size(118, 34);
             button3.TabIndex = 18;
             button3.Text = "SELECCIONAR";
             button3.UseVisualStyleBackColor = false;
@@ -107,33 +98,43 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(371, 266);
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridView1.Size = new Size(536, 266);
             dataGridView1.TabIndex = 11;
             // 
-            // VendedorProductoListarVista
+            // panel2
+            // 
+            panel2.BackColor = Color.Teal;
+            panel2.Controls.Add(label2);
+            panel2.Location = new Point(0, -3);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(560, 60);
+            panel2.TabIndex = 16;
+            // 
+            // VendedorClienteListarVista
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(397, 450);
-            Controls.Add(panel1);
+            ClientSize = new Size(560, 406);
             Controls.Add(panel2);
-            Name = "VendedorProductoListarVista";
-            Text = "VendedorProductoListarVista";
-            Load += VendedorProductoListarVista_Load;
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
+            Controls.Add(panel1);
+            Name = "VendedorClienteListarVista";
+            Text = "VendedorClienteListarVista";
+            Load += VendedorClienteListarVista_Load;
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Panel panel2;
         private Label label2;
         private Panel panel1;
-        private DataGridView dataGridView1;
         private Button button1;
         private Button button3;
+        private DataGridView dataGridView1;
+        private Panel panel2;
     }
 }

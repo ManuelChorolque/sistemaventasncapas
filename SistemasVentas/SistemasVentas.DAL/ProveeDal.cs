@@ -46,7 +46,7 @@ namespace SistemasVentas.DAL
         {
             string consulta = "update provee set idproducto=" + p.IdProducto + "," +
                                                   "idproveedor=" + p.IdProveedor + "," +
-                                                  "fecha='" + p.Fecha + "'," +
+                                                  "fecha='" + p.Fecha.ToString("yyyy-MM-dd HH:mm:ss") + "'," +
                                                   "precio=" + p.Precio + "" +
                                               "where idprovee=" + p.IdProvee;
             conexion.Ejecutar(consulta);

@@ -21,7 +21,7 @@ namespace SistemasVentas.DAL
             string consulta = "insert into usuario values(" + usuario.IdPersona + "," +
                                                         "'" + usuario.NombreUser + "'," +
                                                         "'" + usuario.Contraseña + "'," +
-                                                        "'" + usuario.FechaReg+ "')";
+                                                        "'" + usuario.FechaReg.ToString("yyyy-MM-dd HH:mm:ss") + "')";
             conexion.Ejecutar(consulta);
         }
        
@@ -47,7 +47,7 @@ namespace SistemasVentas.DAL
             string consulta = "update usuario set idpersona=" + u.IdPersona + "," +
                                                   "nombreuser='" + u.NombreUser + "'," +
                                                   "contraseña='" + u.Contraseña + "'," +
-                                                  "fechareg='" + u.FechaReg + "'" +                            
+                                                  "fechareg='" + u.FechaReg.ToString("yyyy-MM-dd HH:mm:ss") + "'" +                            
                                           "where idusuario=" + u.IdUsuario;
             conexion.Ejecutar(consulta);
         }
@@ -58,12 +58,8 @@ namespace SistemasVentas.DAL
         }
         public DataTable UsuarioDatosDal()
         {
-            string consulta = "SELECT USUARIO.IDUSUARIO, (PERSONA.NOMBRE+' '+PERSONA.APELLIDO) NOMBRECOMPLETO, USUARIO.NOMBREUSER, " +
-                              "ROL.NOMBRE AS NOMBREROL, USUARIOROL.FECHAASIGNA "+
-                              "FROM PERSONA INNER JOIN "+
-                              "USUARIO ON PERSONA.IDPERSONA = USUARIO.IDPERSONA INNER JOIN "+
-                              "USUARIOROL ON USUARIO.IDUSUARIO = USUARIOROL.IDUSUARIO INNER JOIN "+
-                              "ROL ON USUARIOROL.IDROL = ROL.IDROL";
+            string consulta = "SELECT USUARIO.IDUSUARIO, (PERSONA.NOMBRE+' '+PERSONA.APELLIDO) NOMBRECOMPLETO, USUARIO.NOMBREUSER, USUARIO.CONTRASEÑA, USUARIO.FECHAREG " +
+                "FROM USUARIO INNER JOIN PERSONA ON USUARIO.IDPERSONA = PERSONA.IDPERSONA";
             return conexion.EjecutarDataTabla(consulta,"fsdf");
         }
     }

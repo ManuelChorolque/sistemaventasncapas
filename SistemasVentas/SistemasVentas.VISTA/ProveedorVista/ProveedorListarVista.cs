@@ -1,7 +1,8 @@
 ﻿using SistemasVentas.BSS;
-using SistemasVentas.VISTA.IngresoVistas;
-using SistemasVentas.VISTA.ProveeVistas;
-using SistemasVentas.VISTA.UsuarioRolVistas;
+using SistemasVentas.VISTA.IngresoVista;
+using SistemasVentas.VISTA.ProveeVista;
+using SistemasVentas.VISTA.RolVista;
+using SistemasVentas.VISTA.UsuarioRolVista;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -28,8 +29,40 @@ namespace SistemasVentas.VISTA.ProveedorVista
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ProveeInsertarVistas.IdProductoSeleccionado = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
-            IngresoInsertarVistas.IdProveedorSeleccionado = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            ProveeInsertarVista.IdProveedorSeleccionado = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            IngresoInsertarVista.IdProveedorSeleccionado = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            IngresoEditarVista.IdProveedorSeleccionado = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ProveedorInsertarVista fr = new ProveedorInsertarVista();
+            if (fr.ShowDialog() == DialogResult.OK)
+            {
+                dataGridView1.DataSource = bss.ListarProveedorBss();
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            int IdProveedorSelecionado = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            ProveedorEditarVista fr = new ProveedorEditarVista(IdProveedorSelecionado);
+            if (fr.ShowDialog() == DialogResult.OK)
+            {
+                dataGridView1.DataSource = bss.ListarProveedorBss();
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            int IdProveedorSelecionado = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            DialogResult result = MessageBox.Show("Esta seguro de elimar este proveedor", "Eliminando", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                bss.EliminarProveedorBss(IdProveedorSelecionado);
+                dataGridView1.DataSource = bss.ListarProveedorBss();
+            }
         }
     }
 }

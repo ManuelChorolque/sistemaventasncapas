@@ -1,4 +1,5 @@
 ﻿using SistemasVentas.BSS;
+using SistemasVentas.VISTA.UsuarioVista;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,7 +21,37 @@ namespace SistemasVentas.VISTA.UsuarioRolVista
         UsuarioRolBss bss = new UsuarioRolBss();
         private void UsuarioRolListarVista_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = bss.ListarUsuarioRolBss();
+            dataGridView1.DataSource = bss.UsuarioRolDatosBss();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            UsuarioRolInsertarVista fr = new UsuarioRolInsertarVista();
+            if (fr.ShowDialog() == DialogResult.OK)
+            {
+                dataGridView1.DataSource = bss.UsuarioRolDatosBss();
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            int IdUsuarioRolSelecionado = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            UsuarioRolEditarVista fr = new UsuarioRolEditarVista(IdUsuarioRolSelecionado);
+            if (fr.ShowDialog() == DialogResult.OK)
+            {
+                dataGridView1.DataSource = bss.UsuarioRolDatosBss();
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            int IdUsuarioRolSelecionado = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            DialogResult result = MessageBox.Show("Esta seguro de elimar esta usuario", "Eliminando", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                bss.EliminarUsuarioRolBss(IdUsuarioRolSelecionado);
+                dataGridView1.DataSource = bss.UsuarioRolDatosBss();
+            }
         }
     }
 }

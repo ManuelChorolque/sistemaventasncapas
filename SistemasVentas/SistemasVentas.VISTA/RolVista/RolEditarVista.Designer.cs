@@ -28,64 +28,63 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.SuspendLayout();
+            button2 = new Button();
+            button1 = new Button();
+            textBox1 = new TextBox();
+            label1 = new Label();
+            SuspendLayout();
             // 
             // button2
             // 
-            this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button2.Location = new System.Drawing.Point(475, 305);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "CANCELAR";
-            this.button2.UseVisualStyleBackColor = true;
+            button2.DialogResult = DialogResult.Cancel;
+            button2.Location = new Point(284, 222);
+            button2.Name = "button2";
+            button2.Size = new Size(83, 23);
+            button2.TabIndex = 9;
+            button2.Text = "CANCELAR";
+            button2.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
-            this.button1.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.button1.Location = new System.Drawing.Point(280, 305);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "GUARDAR";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            button1.DialogResult = DialogResult.OK;
+            button1.Location = new Point(113, 222);
+            button1.Name = "button1";
+            button1.Size = new Size(83, 23);
+            button1.TabIndex = 8;
+            button1.Text = "GUARDAR";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(224, 122);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(445, 23);
-            this.textBox1.TabIndex = 7;
+            textBox1.Location = new Point(113, 114);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(298, 23);
+            textBox1.TabIndex = 7;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(132, 125);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 15);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "NOMBRE";
+            label1.AutoSize = true;
+            label1.Location = new Point(21, 117);
+            label1.Name = "label1";
+            label1.Size = new Size(56, 15);
+            label1.TabIndex = 6;
+            label1.Text = "NOMBRE";
             // 
             // RolEditarVista
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
-            this.Name = "RolEditarVista";
-            this.Text = "RolEditarVista";
-            this.Load += new System.EventHandler(this.RolEditarVista_Load);
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(535, 299);
+            Controls.Add(button2);
+            Controls.Add(button1);
+            Controls.Add(textBox1);
+            Controls.Add(label1);
+            Name = "RolEditarVista";
+            Text = "RolEditarVista";
+            Load += RolEditarVista_Load;
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

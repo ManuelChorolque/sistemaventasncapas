@@ -9,12 +9,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace SistemasVentas.VISTA.RolVista
 {
-    public partial class RolInserVista : Form
+    public partial class RolInsertarVista : Form
     {
-        public RolInserVista()
+        public RolInsertarVista()
         {
             InitializeComponent();
         }
@@ -22,12 +23,10 @@ namespace SistemasVentas.VISTA.RolVista
         private void button1_Click(object sender, EventArgs e)
         {
             Rol r = new Rol();
-            r.Nombre = textBox1.Text;      
+            r.Nombre = textBox1.Text;
 
             bss.InsertarRolBss(r);
-            MessageBox.Show("Se guardo correctamente el rol");
+            MessageBox.Show("Se guardo correctamente Rol");
         }
-
-      
     }
 }

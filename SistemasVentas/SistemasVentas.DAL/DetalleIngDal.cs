@@ -52,7 +52,7 @@ namespace SistemasVentas.DAL
         {
             string consulta = "update cliente set idingreso=" + d.IdIngreso + "," +
                                                   "idproducto=" + d.IdProducto + "," +
-                                                  "fechavenc='" + d.FechaVenc + "'," +
+                                                  "fechavenc='" + d.FechaVenc.ToString("yyyy-MM-dd HH:mm:ss") + "'," +
                                                   "cantidad=" + d.Cantidad + "," +
                                                   "preciocosto=" + d.PrecioCosto + "," +
                                                   "precioventa=" + d.PrecioVenta + "," +
@@ -67,7 +67,7 @@ namespace SistemasVentas.DAL
         }
         public DataTable DetalleIngDatosDal()
         {
-            string consulta = "SELECT DETALLEING.IDDETALLEING, PRODUCTO.NOMBRE NOMBREPRODUCTO, INGRESO.FECHAINGRESO, PRODUCTO.CODIGOBARRA, PRODUCTO.UNIDAD, INGRESO.TOTAL, DETALLEING.CANTIDAD, DETALLEING.PRECIOCOSTO, " +
+            string consulta = "SELECT DETALLEING.IDDETALLEING, PRODUCTO.NOMBRE PRODUCTO, INGRESO.FECHAINGRESO, PRODUCTO.CODIGOBARRA, PRODUCTO.UNIDAD, INGRESO.TOTAL, DETALLEING.CANTIDAD, DETALLEING.PRECIOCOSTO, " +
                               "DETALLEING.PRECIOVENTA, DETALLEING.SUBTOTAL, DETALLEING.ESTADO " +
                               "FROM DETALLEING INNER JOIN PRODUCTO ON DETALLEING.IDPRODUCTO = PRODUCTO.IDPRODUCTO INNER JOIN " +
                               "INGRESO ON DETALLEING.IDINGRESO = INGRESO.IDINGRESO";

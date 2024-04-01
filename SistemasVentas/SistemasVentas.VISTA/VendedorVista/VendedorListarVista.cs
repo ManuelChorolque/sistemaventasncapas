@@ -1,4 +1,5 @@
 ﻿using SistemasVentas.BSS;
+using SistemasVentas.VISTA.GerenteVista;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -46,6 +47,12 @@ namespace SistemasVentas.VISTA.VendedorVista
         {
             DetalleIngBss bss = new DetalleIngBss();
             dataGridView1.DataSource = bss.DetalleIngDatosBss();
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            VendedorInsertarVista vender = new VendedorInsertarVista();
+            vender.Show();
         }
     }
 }

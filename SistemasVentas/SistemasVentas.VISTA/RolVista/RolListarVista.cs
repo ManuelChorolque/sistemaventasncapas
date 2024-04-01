@@ -1,6 +1,6 @@
 ﻿using SistemasVentas.BSS;
 using SistemasVentas.VISTA.PersonaVista;
-using SistemasVentas.VISTA.UsuarioRolVistas;
+using SistemasVentas.VISTA.UsuarioRolVista;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,12 +27,15 @@ namespace SistemasVentas.VISTA.RolVista
 
         private void button1_Click(object sender, EventArgs e)
         {
-            UsuarioRolInsertarVistas.IdRolSeleccionado = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            UsuarioRolInsertarVista.IdRolSeleccionado = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            UsuarioRolEditarVista.IdRolSeleccionado = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            RolInserVista fr = new RolInserVista();
+            RolInsertarVista fr = new RolInsertarVista();
             if (fr.ShowDialog() == DialogResult.OK)
             {
                 dataGridView1.DataSource = bss.ListarRolBss();
@@ -52,7 +55,7 @@ namespace SistemasVentas.VISTA.RolVista
         private void button4_Click(object sender, EventArgs e)
         {
             int IdRolSelecionado = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
-            DialogResult result = MessageBox.Show("Esta seguro de elimar esta persona", "Eliminando", MessageBoxButtons.YesNo);
+            DialogResult result = MessageBox.Show("Esta seguro de elimar este rol", "Eliminando", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
                 bss.EliminarRolBss(IdRolSelecionado);

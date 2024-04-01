@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SistemasVentas.BSS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,5 +17,17 @@ namespace SistemasVentas.VISTA.VendedorVista
         {
             InitializeComponent();
         }
+
+        private void VendedorProductoListarVista_Load(object sender, EventArgs e)
+        {
+            ProductoBss bss = new ProductoBss();
+            dataGridView1.DataSource = bss.ProductoDatosBss();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            VendedorInsertarVista.IdProductoSeleccionado = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+        }
+    
     }
 }

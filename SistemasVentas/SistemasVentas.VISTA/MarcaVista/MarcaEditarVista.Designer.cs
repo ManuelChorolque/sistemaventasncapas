@@ -28,60 +28,63 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.SuspendLayout();
+            button2 = new Button();
+            button1 = new Button();
+            textBox1 = new TextBox();
+            label1 = new Label();
+            SuspendLayout();
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(477, 279);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "CANCELAR";
-            this.button2.UseVisualStyleBackColor = true;
+            button2.DialogResult = DialogResult.Cancel;
+            button2.Location = new Point(290, 223);
+            button2.Name = "button2";
+            button2.Size = new Size(75, 23);
+            button2.TabIndex = 7;
+            button2.Text = "CANCELAR";
+            button2.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(294, 279);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "GUARDAR";
-            this.button1.UseVisualStyleBackColor = true;
+            button1.DialogResult = DialogResult.OK;
+            button1.Location = new Point(145, 223);
+            button1.Name = "button1";
+            button1.Size = new Size(75, 23);
+            button1.TabIndex = 6;
+            button1.Text = "GUARDAR";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(234, 148);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(416, 23);
-            this.textBox1.TabIndex = 5;
+            textBox1.Location = new Point(74, 148);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(416, 23);
+            textBox1.TabIndex = 5;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(151, 156);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 15);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "NOMBRE";
+            label1.AutoSize = true;
+            label1.Location = new Point(12, 151);
+            label1.Name = "label1";
+            label1.Size = new Size(56, 15);
+            label1.TabIndex = 4;
+            label1.Text = "NOMBRE";
             // 
             // MarcaEditarVista
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
-            this.Name = "MarcaEditarVista";
-            this.Text = "MarcaEditarVista";
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(580, 339);
+            Controls.Add(button2);
+            Controls.Add(button1);
+            Controls.Add(textBox1);
+            Controls.Add(label1);
+            Name = "MarcaEditarVista";
+            Text = "MarcaEditarVista";
+            Load += MarcaEditarVista_Load;
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
