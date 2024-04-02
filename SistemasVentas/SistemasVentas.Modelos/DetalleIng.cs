@@ -8,7 +8,7 @@ namespace SistemasVentas.Modelos
 {
     public class DetalleIng
     {
-        public int IdDetalleIngreso { get; set; }
+        public int IdDetalleIng { get; set; }
         public int IdIngreso { get; set; }
         public int IdProducto { get; set; }
         public DateTime FechaVenc { get; set; }

@@ -59,9 +59,9 @@ namespace SistemasVentas.DAL
         }
         public DataTable VentaDatosDal()
         {
-            string consulta = "SELECT VENTA.IDVENTA, CLIENTE.TIPOCLIENTE, USUARIO.NOMBREUSER, VENTA.FECHA, VENTA.TOTAL, VENTA.ESTADO " +
-                "FROM VENTA INNER JOIN CLIENTE ON VENTA.IDCLIENTE = CLIENTE.IDCLIENTE INNER JOIN " +
-                "USUARIO ON VENTA.IDVENDEDOR = USUARIO.IDUSUARIO";
+            string consulta = "SELECT V.IDVENTA, (P.NOMBRE+' '+P.APELLIDO) NOMBRE_CLIENTE, U.NOMBREUSER USUARIO_VENDEDOR, V.FECHA, V.TOTAL, V.ESTADO " +
+                "FROM VENTA V INNER JOIN CLIENTE C ON V.IDCLIENTE = C.IDCLIENTE INNER JOIN PERSONA P ON C.IDPERSONA = P.IDPERSONA " +
+                "LEFT JOIN USUARIO U ON V.IDVENDEDOR = U.IDUSUARIO";
             return conexion.EjecutarDataTabla(consulta, "fsdf");
         }
 

@@ -38,6 +38,7 @@ namespace SistemasVentas.DAL
                 c.CodigoCliente = tabla.Rows[0]["codigocliente"].ToString();
                 c.Estado = tabla.Rows[0]["estado"].ToString();
             }
+     
             return c;
 
         }

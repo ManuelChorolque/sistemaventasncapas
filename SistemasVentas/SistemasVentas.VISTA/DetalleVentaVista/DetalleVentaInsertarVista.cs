@@ -30,7 +30,7 @@ namespace SistemasVentas.VISTA.DetalleVentaVista
             if (fr.ShowDialog() == DialogResult.OK)
             {
                 Venta venta = bss.ObtenerIdBss(IdVentaSeleccionado);
-                textBox1.Text = venta.IdVendedor.ToString();
+                textBox1.Text = venta.Fecha.ToString();
             }
         }
 
@@ -51,8 +51,8 @@ namespace SistemasVentas.VISTA.DetalleVentaVista
         {
             DetalleVentaBss bss = new DetalleVentaBss();
             DetalleVenta dv = new DetalleVenta();
-            dv.IdVenta = Convert.ToInt32(textBox1.Text);
-            dv.IdProducto = Convert.ToInt32(textBox2.Text);
+            dv.IdVenta = IdVentaSeleccionado;
+            dv.IdProducto = IdProductoSeleccionado;
             dv.Cantidad = Convert.ToInt32(textBox3.Text);
             dv.PrecioVenta = Convert.ToDecimal(textBox4.Text);
             dv.Subtotal = Convert.ToDecimal(textBox5.Text);

@@ -26,13 +26,32 @@ namespace SistemasVentas.DAL
                                                         "'Exitoso')";
             conexion.Ejecutar(consulta);
         }
+        public DetalleVenta ObtenerDetalleVentaId(int id)
+        {
+            string consulta = "select * from detalleventa where iddetalleventa=" + id;
+            DataTable tabla = conexion.EjecutarDataTabla(consulta, "asdas");
+            DetalleVenta d = new DetalleVenta();
+
+            if (tabla.Rows.Count > 0)
+            {
+                d.IdDetalleVenta = Convert.ToInt32(tabla.Rows[0]["iddetalleventa"]);
+                d.IdVenta = Convert.ToInt32(tabla.Rows[0]["idventa"]);
+                d.IdProducto = Convert.ToInt32(tabla.Rows[0]["idproducto"]);
+                d.Cantidad = Convert.ToInt32(tabla.Rows[0]["cantidad"]);
+                d.PrecioVenta = Convert.ToDecimal(tabla.Rows[0]["precioventa"]);
+                d.Subtotal = Convert.ToDecimal(tabla.Rows[0]["subtotal"]);
+                d.Estado = tabla.Rows[0]["estado"].ToString();
+            }
+            return d;
+
+        }
         public void EditarDetalleVentaDal(DetalleVenta d)
         {
             string consulta = "update detalleventa set idventa=" + d.IdVenta + "," +
                                                   "idproducto=" + d.IdProducto + "," +
                                                   "cantidad=" + d.Cantidad + "," +
                                                   "precioventa=" + d.PrecioVenta + "," +
-                                                  "subtotal=" + d.Subtotal + "," +
+                                                  "subtotal=" + d.Subtotal + "" +
                                               "where iddetalleventa=" + d.IdDetalleVenta;
             conexion.Ejecutar(consulta);
         }
@@ -43,7 +62,7 @@ namespace SistemasVentas.DAL
         }
         public DataTable DetalleVentaDatosDal()
         {
-            string consulta = "SELECT DETALLEVENTA.IDDETALLEVENTA, VENTA.FECHA, PRODUCTO.NOMBRE NOMBREPRODUCTO, PRODUCTO.CODIGOBARRA, DETALLEVENTA.CANTIDAD, DETALLEVENTA.PRECIOVENTA, DETALLEVENTA.SUBTOTAL, DETALLEVENTA.ESTADO " +
+            string consulta = "SELECT DETALLEVENTA.IDDETALLEVENTA, VENTA.FECHA FECHA_VENTA, PRODUCTO.NOMBRE NOMBRE_PRODUCTO, PRODUCTO.CODIGOBARRA, DETALLEVENTA.CANTIDAD, DETALLEVENTA.PRECIOVENTA, DETALLEVENTA.SUBTOTAL, DETALLEVENTA.ESTADO " +
                               "FROM DETALLEVENTA INNER JOIN VENTA ON DETALLEVENTA.IDVENTA = VENTA.IDVENTA INNER JOIN " +
                               "PRODUCTO ON DETALLEVENTA.IDPRODUCTO = PRODUCTO.IDPRODUCTO";
             return conexion.EjecutarDataTabla(consulta, "fsdf");

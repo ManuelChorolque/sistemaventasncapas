@@ -18,7 +18,7 @@ namespace SistemasVentas.DAL
         }
         public void InsertarDetalleIngDal(DetalleIng detalleIng)
         {
-            string consulta = "insert into detalleIng values(" + detalleIng.IdIngreso + "," +
+            string consulta = "insert into detalleing values(" + detalleIng.IdIngreso + "," +
                                                         "" + detalleIng.IdProducto + "," +
                                                         "'" + detalleIng.FechaVenc.ToString("yyyy-MM-dd HH:mm:ss") + "'," +
                                                         "" + detalleIng.Cantidad + "," +
@@ -36,8 +36,9 @@ namespace SistemasVentas.DAL
 
             if (tabla.Rows.Count > 0)
             {
-                d.IdDetalleIngreso = Convert.ToInt32(tabla.Rows[0]["iddetalleingreso"]);
+                d.IdDetalleIng = Convert.ToInt32(tabla.Rows[0]["iddetalleing"]);
                 d.IdProducto = Convert.ToInt32(tabla.Rows[0]["idproducto"]);
+                d.IdIngreso = Convert.ToInt32(tabla.Rows[0]["idingreso"]);
                 d.FechaVenc = Convert.ToDateTime(tabla.Rows[0]["fechavenc"]);
                 d.Cantidad = Convert.ToInt32(tabla.Rows[0]["cantidad"]);
                 d.PrecioCosto = Convert.ToDecimal(tabla.Rows[0]["preciocosto"]);
@@ -50,14 +51,14 @@ namespace SistemasVentas.DAL
         }
         public void EditarDetalleIngDal(DetalleIng d)
         {
-            string consulta = "update cliente set idingreso=" + d.IdIngreso + "," +
+            string consulta = "update detalleing set idingreso=" + d.IdIngreso + "," +
                                                   "idproducto=" + d.IdProducto + "," +
                                                   "fechavenc='" + d.FechaVenc.ToString("yyyy-MM-dd HH:mm:ss") + "'," +
                                                   "cantidad=" + d.Cantidad + "," +
                                                   "preciocosto=" + d.PrecioCosto + "," +
                                                   "precioventa=" + d.PrecioVenta + "," +
                                                   "subtotal=" + d.Subtotal + "" +
-                                              "where iddetalleingreso=" + d.IdDetalleIngreso;
+                                              "where iddetalleing=" + d.IdDetalleIng;
             conexion.Ejecutar(consulta);
         }
         public void EliminarDetalleIngDal(int id)
@@ -67,7 +68,7 @@ namespace SistemasVentas.DAL
         }
         public DataTable DetalleIngDatosDal()
         {
-            string consulta = "SELECT DETALLEING.IDDETALLEING, PRODUCTO.NOMBRE PRODUCTO, INGRESO.FECHAINGRESO, PRODUCTO.CODIGOBARRA, PRODUCTO.UNIDAD, INGRESO.TOTAL, DETALLEING.CANTIDAD, DETALLEING.PRECIOCOSTO, " +
+            string consulta = "SELECT DETALLEING.IDDETALLEING, PRODUCTO.NOMBRE PRODUCTO, INGRESO.FECHAINGRESO, DETALLEING.FECHAVENC, INGRESO.TOTAL, DETALLEING.CANTIDAD, DETALLEING.PRECIOCOSTO, " +
                               "DETALLEING.PRECIOVENTA, DETALLEING.SUBTOTAL, DETALLEING.ESTADO " +
                               "FROM DETALLEING INNER JOIN PRODUCTO ON DETALLEING.IDPRODUCTO = PRODUCTO.IDPRODUCTO INNER JOIN " +
                               "INGRESO ON DETALLEING.IDINGRESO = INGRESO.IDINGRESO";

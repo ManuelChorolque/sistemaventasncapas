@@ -20,7 +20,6 @@ namespace SistemasVentas.VISTA.DetalleIngVista
         {
             InitializeComponent();
         }
-
         public static int IdProductoSeleccionado = 0;
         private void button4_Click(object sender, EventArgs e)
         {
@@ -33,7 +32,6 @@ namespace SistemasVentas.VISTA.DetalleIngVista
                 textBox2.Text = producto.Nombre;
             }
         }
-
         public static int IdIngresoSeleccionado = 0;
         private void button3_Click(object sender, EventArgs e)
         {
@@ -51,8 +49,8 @@ namespace SistemasVentas.VISTA.DetalleIngVista
         {
             DetalleIngBss bss = new DetalleIngBss();
             DetalleIng di = new DetalleIng();
-            di.IdIngreso = Convert.ToInt32(textBox1.Text);
-            di.IdProducto = Convert.ToInt32(textBox2.Text);
+            di.IdProducto = IdProductoSeleccionado;
+            di.IdIngreso = IdIngresoSeleccionado;      
             di.FechaVenc = dateTimePicker1.Value;
             di.Cantidad = Convert.ToInt32(textBox4.Text);
             di.PrecioCosto = Convert.ToDecimal(textBox5.Text);

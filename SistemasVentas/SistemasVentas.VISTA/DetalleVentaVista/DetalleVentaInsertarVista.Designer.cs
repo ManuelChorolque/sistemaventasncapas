@@ -47,20 +47,20 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(105, 102);
+            label1.Location = new Point(116, 102);
             label1.Name = "label1";
-            label1.Size = new Size(53, 15);
+            label1.Size = new Size(42, 15);
             label1.TabIndex = 0;
-            label1.Text = "IDVENTA";
+            label1.Text = "VENTA";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(79, 142);
+            label2.Location = new Point(90, 142);
             label2.Name = "label2";
-            label2.Size = new Size(79, 15);
+            label2.Size = new Size(68, 15);
             label2.TabIndex = 1;
-            label2.Text = "IDPRODUCTO";
+            label2.Text = "PRODUCTO";
             // 
             // label3
             // 
@@ -126,6 +126,7 @@
             // 
             // button1
             // 
+            button1.DialogResult = DialogResult.OK;
             button1.Location = new Point(291, 327);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
@@ -136,6 +137,7 @@
             // 
             // button2
             // 
+            button2.DialogResult = DialogResult.Cancel;
             button2.Location = new Point(451, 327);
             button2.Name = "button2";
             button2.Size = new Size(75, 23);

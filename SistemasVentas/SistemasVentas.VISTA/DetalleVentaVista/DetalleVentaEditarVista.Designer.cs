@@ -28,140 +28,167 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.SuspendLayout();
+            button2 = new Button();
+            button1 = new Button();
+            textBox5 = new TextBox();
+            textBox4 = new TextBox();
+            textBox3 = new TextBox();
+            textBox2 = new TextBox();
+            textBox1 = new TextBox();
+            label5 = new Label();
+            label4 = new Label();
+            label3 = new Label();
+            label2 = new Label();
+            label1 = new Label();
+            button3 = new Button();
+            button4 = new Button();
+            SuspendLayout();
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(490, 328);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 23;
-            this.button2.Text = "CANCELAR";
-            this.button2.UseVisualStyleBackColor = true;
+            button2.DialogResult = DialogResult.Cancel;
+            button2.Location = new Point(490, 328);
+            button2.Name = "button2";
+            button2.Size = new Size(75, 23);
+            button2.TabIndex = 23;
+            button2.Text = "CANCELAR";
+            button2.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(330, 328);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 22;
-            this.button1.Text = "GUARDAR";
-            this.button1.UseVisualStyleBackColor = true;
+            button1.DialogResult = DialogResult.OK;
+            button1.Location = new Point(330, 328);
+            button1.Name = "button1";
+            button1.Size = new Size(75, 23);
+            button1.TabIndex = 22;
+            button1.Text = "GUARDAR";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(242, 266);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(443, 23);
-            this.textBox5.TabIndex = 21;
+            textBox5.Location = new Point(242, 266);
+            textBox5.Name = "textBox5";
+            textBox5.Size = new Size(443, 23);
+            textBox5.TabIndex = 21;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(242, 223);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(443, 23);
-            this.textBox4.TabIndex = 20;
+            textBox4.Location = new Point(242, 223);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(443, 23);
+            textBox4.TabIndex = 20;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(242, 182);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(443, 23);
-            this.textBox3.TabIndex = 19;
+            textBox3.Location = new Point(242, 182);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(443, 23);
+            textBox3.TabIndex = 19;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(242, 140);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(443, 23);
-            this.textBox2.TabIndex = 18;
+            textBox2.Location = new Point(242, 140);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(342, 23);
+            textBox2.TabIndex = 18;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(242, 100);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(443, 23);
-            this.textBox1.TabIndex = 17;
+            textBox1.Location = new Point(242, 100);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(342, 23);
+            textBox1.TabIndex = 17;
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(138, 269);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(59, 15);
-            this.label5.TabIndex = 16;
-            this.label5.Text = "SUBTOTAL";
+            label5.AutoSize = true;
+            label5.Location = new Point(138, 269);
+            label5.Name = "label5";
+            label5.Size = new Size(59, 15);
+            label5.TabIndex = 16;
+            label5.Text = "SUBTOTAL";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(115, 226);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(82, 15);
-            this.label4.TabIndex = 15;
-            this.label4.Text = "PRECIOVENTA";
+            label4.AutoSize = true;
+            label4.Location = new Point(115, 226);
+            label4.Name = "label4";
+            label4.Size = new Size(82, 15);
+            label4.TabIndex = 15;
+            label4.Text = "PRECIOVENTA";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(132, 185);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 15);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "CANTIDAD";
+            label3.AutoSize = true;
+            label3.Location = new Point(132, 185);
+            label3.Name = "label3";
+            label3.Size = new Size(65, 15);
+            label3.TabIndex = 14;
+            label3.Text = "CANTIDAD";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(118, 143);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 15);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "IDPRODUCTO";
+            label2.AutoSize = true;
+            label2.Location = new Point(129, 143);
+            label2.Name = "label2";
+            label2.Size = new Size(68, 15);
+            label2.TabIndex = 13;
+            label2.Text = "PRODUCTO";
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(144, 103);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 15);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "IDVENTA";
+            label1.AutoSize = true;
+            label1.Location = new Point(155, 103);
+            label1.Name = "label1";
+            label1.Size = new Size(42, 15);
+            label1.TabIndex = 12;
+            label1.Text = "VENTA";
+            // 
+            // button3
+            // 
+            button3.Location = new Point(590, 100);
+            button3.Name = "button3";
+            button3.Size = new Size(95, 23);
+            button3.TabIndex = 24;
+            button3.Text = "SELECCIONAR";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
+            // button4
+            // 
+            button4.Location = new Point(590, 140);
+            button4.Name = "button4";
+            button4.Size = new Size(95, 23);
+            button4.TabIndex = 25;
+            button4.Text = "SELECCIONAR";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // DetalleVentaEditarVista
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Name = "DetalleVentaEditarVista";
-            this.Text = "DetalleVentaEditarVista";
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(button4);
+            Controls.Add(button3);
+            Controls.Add(button2);
+            Controls.Add(button1);
+            Controls.Add(textBox5);
+            Controls.Add(textBox4);
+            Controls.Add(textBox3);
+            Controls.Add(textBox2);
+            Controls.Add(textBox1);
+            Controls.Add(label5);
+            Controls.Add(label4);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Name = "DetalleVentaEditarVista";
+            Text = "DetalleVentaEditarVista";
+            Load += DetalleVentaEditarVista_Load;
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -178,5 +205,7 @@
         private Label label3;
         private Label label2;
         private Label label1;
+        private Button button3;
+        private Button button4;
     }
 }

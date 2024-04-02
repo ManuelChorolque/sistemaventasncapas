@@ -29,6 +29,7 @@ namespace SistemasVentas.VISTA.TipoProdVista
         private void button1_Click(object sender, EventArgs e)
         {
             ProductoInsertarVista.IdTipoProdSeleccionado = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            ProductoEditarVista.IdTipoProdSeleccionado = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
         }
 
         private void button2_Click(object sender, EventArgs e)

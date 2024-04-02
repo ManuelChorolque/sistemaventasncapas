@@ -51,52 +51,65 @@
             // 
             // button1
             // 
+            button1.BackColor = SystemColors.MenuHighlight;
             button1.DialogResult = DialogResult.OK;
-            button1.Location = new Point(657, 415);
+            button1.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            button1.ForeColor = SystemColors.ControlLightLight;
+            button1.Location = new Point(621, 409);
             button1.Name = "button1";
-            button1.Size = new Size(113, 23);
+            button1.Size = new Size(128, 29);
             button1.TabIndex = 1;
             button1.Text = "SELECCIONAR";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
             // button4
             // 
+            button4.BackColor = SystemColors.MenuHighlight;
             button4.DialogResult = DialogResult.OK;
-            button4.Location = new Point(426, 415);
+            button4.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            button4.ForeColor = SystemColors.ControlLightLight;
+            button4.Location = new Point(390, 409);
             button4.Name = "button4";
-            button4.Size = new Size(75, 23);
+            button4.Size = new Size(103, 29);
             button4.TabIndex = 7;
             button4.Text = "ELIMINAR";
-            button4.UseVisualStyleBackColor = true;
+            button4.UseVisualStyleBackColor = false;
             button4.Click += button4_Click;
             // 
             // button3
             // 
+            button3.BackColor = SystemColors.MenuHighlight;
             button3.DialogResult = DialogResult.OK;
-            button3.Location = new Point(260, 415);
+            button3.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            button3.ForeColor = SystemColors.ControlLightLight;
+            button3.Location = new Point(224, 409);
             button3.Name = "button3";
-            button3.Size = new Size(75, 23);
+            button3.Size = new Size(106, 29);
             button3.TabIndex = 6;
             button3.Text = "EDITAR";
-            button3.UseVisualStyleBackColor = true;
+            button3.UseVisualStyleBackColor = false;
             button3.Click += button3_Click;
             // 
             // button2
             // 
+            button2.BackColor = SystemColors.MenuHighlight;
             button2.DialogResult = DialogResult.OK;
-            button2.Location = new Point(96, 415);
+            button2.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            button2.ForeColor = SystemColors.ControlLightLight;
+            button2.Location = new Point(60, 409);
             button2.Name = "button2";
-            button2.Size = new Size(75, 23);
+            button2.Size = new Size(104, 29);
             button2.TabIndex = 5;
             button2.Text = "AGREGAR";
-            button2.UseVisualStyleBackColor = true;
+            button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
             // 
             // ClienteListarVista
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Teal;
             ClientSize = new Size(800, 450);
             Controls.Add(button4);
             Controls.Add(button3);
