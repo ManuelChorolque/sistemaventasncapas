@@ -42,6 +42,7 @@ namespace SistemasVentas.VISTA.ClienteVista
             {
                 dataGridView1.DataSource = bss.ClienteDatosBss();
             }
+            this.Close();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -52,6 +53,7 @@ namespace SistemasVentas.VISTA.ClienteVista
             {
                 dataGridView1.DataSource = bss.ClienteDatosBss();
             }
+            this.Close();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -63,6 +65,7 @@ namespace SistemasVentas.VISTA.ClienteVista
                 bss.EliminarClienteBss(IdClienteSelecionado);
                 dataGridView1.DataSource = bss.ClienteDatosBss();
             }
+            this.Close();
         }
     }
 }

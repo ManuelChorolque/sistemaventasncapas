@@ -48,6 +48,16 @@ namespace SistemasVentas.DAL
             string consulta = "delete from rol where idrol=" + id;
             conexion.Ejecutar(consulta);
         }
+        public DataTable GerenteDatosDal()
+        {
+            string consulta = "SELECT P.NOMBRE AS NombrePersona,P.APELLIDO AS ApellidoPersona,R.NOMBRE AS NombreRol " +
+                "FROM PERSONA P " +
+                "INNER JOIN USUARIO U ON P.IDPERSONA = U.IDPERSONA " +
+                "INNER JOIN USUARIOROL UR ON U.IDUSUARIO = UR.IDUSUARIO " +
+                "INNER JOIN ROL R ON UR.IDROL = R.IDROL " +
+                "WHERE R.NOMBRE IN ('Gerente');";
+            return conexion.EjecutarDataTabla(consulta, "fsdf");
+        }
     }
 }
 

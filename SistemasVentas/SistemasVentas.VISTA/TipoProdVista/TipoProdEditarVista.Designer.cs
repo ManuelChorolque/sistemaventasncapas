@@ -28,64 +28,98 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.SuspendLayout();
+            button2 = new Button();
+            button1 = new Button();
+            textBox1 = new TextBox();
+            label1 = new Label();
+            panel1 = new Panel();
+            label6 = new Label();
+            panel1.SuspendLayout();
+            SuspendLayout();
             // 
             // button2
             // 
-            this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button2.Location = new System.Drawing.Point(457, 279);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "CANCELAR";
-            this.button2.UseVisualStyleBackColor = true;
+            button2.BackColor = SystemColors.MenuHighlight;
+            button2.DialogResult = DialogResult.Cancel;
+            button2.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            button2.ForeColor = SystemColors.ControlLightLight;
+            button2.Location = new Point(268, 147);
+            button2.Name = "button2";
+            button2.Size = new Size(99, 30);
+            button2.TabIndex = 7;
+            button2.Text = "CANCELAR";
+            button2.UseVisualStyleBackColor = false;
             // 
             // button1
             // 
-            this.button1.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.button1.Location = new System.Drawing.Point(245, 279);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "GUARDAR";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            button1.BackColor = SystemColors.MenuHighlight;
+            button1.DialogResult = DialogResult.OK;
+            button1.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            button1.ForeColor = SystemColors.ControlLightLight;
+            button1.Location = new Point(130, 147);
+            button1.Name = "button1";
+            button1.Size = new Size(99, 30);
+            button1.TabIndex = 6;
+            button1.Text = "GUARDAR";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(213, 149);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(477, 23);
-            this.textBox1.TabIndex = 5;
+            textBox1.Location = new Point(98, 92);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(306, 23);
+            textBox1.TabIndex = 5;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(111, 157);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 15);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "NOMBRE";
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = SystemColors.ControlLightLight;
+            label1.Location = new Point(20, 95);
+            label1.Name = "label1";
+            label1.Size = new Size(72, 20);
+            label1.TabIndex = 4;
+            label1.Text = "NOMBRE";
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.FromArgb(0, 64, 64);
+            panel1.Controls.Add(label6);
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(438, 66);
+            panel1.TabIndex = 41;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.ForeColor = SystemColors.ControlLightLight;
+            label6.Location = new Point(67, 20);
+            label6.Name = "label6";
+            label6.Size = new Size(335, 32);
+            label6.TabIndex = 0;
+            label6.Text = "EDITAR TIPO DE PRODUCTO";
             // 
             // TipoProdEditarVista
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
-            this.Name = "TipoProdEditarVista";
-            this.Text = "TipoProdEditarVista";
-            this.Load += new System.EventHandler(this.TipoProdEditarVista_Load);
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Teal;
+            ClientSize = new Size(437, 205);
+            Controls.Add(panel1);
+            Controls.Add(button2);
+            Controls.Add(button1);
+            Controls.Add(textBox1);
+            Controls.Add(label1);
+            Name = "TipoProdEditarVista";
+            Text = "TipoProdEditarVista";
+            Load += TipoProdEditarVista_Load;
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -94,5 +128,7 @@
         private Button button1;
         private TextBox textBox1;
         private Label label1;
+        private Panel panel1;
+        private Label label6;
     }
 }

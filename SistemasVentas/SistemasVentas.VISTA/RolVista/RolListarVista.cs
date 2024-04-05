@@ -40,6 +40,7 @@ namespace SistemasVentas.VISTA.RolVista
             {
                 dataGridView1.DataSource = bss.ListarRolBss();
             }
+            this.Close();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -50,6 +51,7 @@ namespace SistemasVentas.VISTA.RolVista
             {
                 dataGridView1.DataSource = bss.ListarRolBss();
             }
+            this.Close();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -61,6 +63,7 @@ namespace SistemasVentas.VISTA.RolVista
                 bss.EliminarRolBss(IdRolSelecionado);
                 dataGridView1.DataSource = bss.ListarRolBss();
             }
+            this.Close();
         }
     }
 }

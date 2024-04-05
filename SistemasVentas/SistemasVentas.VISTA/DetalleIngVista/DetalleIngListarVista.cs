@@ -31,6 +31,7 @@ namespace SistemasVentas.VISTA.DetalleIngVista
             {
                 dataGridView1.DataSource = bss.DetalleIngDatosBss();
             }
+            this.Close();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -41,6 +42,7 @@ namespace SistemasVentas.VISTA.DetalleIngVista
             {
                 dataGridView1.DataSource = bss.DetalleIngDatosBss();
             }
+            this.Close();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -52,6 +54,7 @@ namespace SistemasVentas.VISTA.DetalleIngVista
                 bss.EliminarDetalleIngBss(IdDetalleIngSelecionado);
                 dataGridView1.DataSource = bss.DetalleIngDatosBss();
             }
+            this.Close();
         }
     }
 }

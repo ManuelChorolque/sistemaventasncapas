@@ -35,25 +35,30 @@ namespace SistemasVentas.VISTA.PersonaVista
 
         private void button2_Click(object sender, EventArgs e)
         {
+            
             PersonaInsertarVista fr = new PersonaInsertarVista();
             if (fr.ShowDialog() == DialogResult.OK)
             {
                 dataGridView1.DataSource = bss.ListarPersonasBss();
             }
+            this.Close();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
+            
             int IdPersonaSelecionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
             PersonaEditarVista fr = new PersonaEditarVista(IdPersonaSelecionada);
             if (fr.ShowDialog() == DialogResult.OK)
             {
                 dataGridView1.DataSource=bss.ListarPersonasBss();
             }
+            this.Close();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
+          
             int IdPersonaSelecionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
             DialogResult result = MessageBox.Show("Esta seguro de elimar esta persona","Eliminando",MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
@@ -61,6 +66,7 @@ namespace SistemasVentas.VISTA.PersonaVista
                 bss.EliminarPersonaBss(IdPersonaSelecionada);
                 dataGridView1.DataSource=bss.ListarPersonasBss();
             }
+            this.Close();
         }
     }
 }

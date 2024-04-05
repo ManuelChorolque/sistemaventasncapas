@@ -43,6 +43,7 @@ namespace SistemasVentas.VISTA.ProveedorVista
             {
                 dataGridView1.DataSource = bss.ListarProveedorBss();
             }
+            this.Close();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -53,6 +54,7 @@ namespace SistemasVentas.VISTA.ProveedorVista
             {
                 dataGridView1.DataSource = bss.ListarProveedorBss();
             }
+            this.Close();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -64,6 +66,7 @@ namespace SistemasVentas.VISTA.ProveedorVista
                 bss.EliminarProveedorBss(IdProveedorSelecionado);
                 dataGridView1.DataSource = bss.ListarProveedorBss();
             }
+            this.Close();
         }
     }
 }

@@ -1,5 +1,7 @@
 ﻿using SistemasVentas.BSS;
 using SistemasVentas.Modelos;
+using SistemasVentas.VISTA.DetalleIngVista;
+using SistemasVentas.VISTA.GerenteVista;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

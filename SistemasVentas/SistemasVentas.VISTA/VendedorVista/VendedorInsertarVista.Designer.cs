@@ -35,6 +35,11 @@
             label7 = new Label();
             label6 = new Label();
             dataGridView1 = new DataGridView();
+            Column1 = new DataGridViewTextBoxColumn();
+            Column2 = new DataGridViewTextBoxColumn();
+            Column3 = new DataGridViewTextBoxColumn();
+            Column4 = new DataGridViewTextBoxColumn();
+            Column5 = new DataGridViewTextBoxColumn();
             button2 = new Button();
             textBox2 = new TextBox();
             label5 = new Label();
@@ -47,11 +52,6 @@
             domainUpDown1 = new DomainUpDown();
             panel2 = new Panel();
             label2 = new Label();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
-            Column4 = new DataGridViewTextBoxColumn();
-            Column5 = new DataGridViewTextBoxColumn();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel2.SuspendLayout();
@@ -120,6 +120,7 @@
             button3.TabIndex = 17;
             button3.Text = "GUARDAR";
             button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // label7
             // 
@@ -154,6 +155,36 @@
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView1.Size = new Size(439, 150);
             dataGridView1.TabIndex = 10;
+            // 
+            // Column1
+            // 
+            Column1.HeaderText = "NRO";
+            Column1.Name = "Column1";
+            Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            Column2.HeaderText = "DETALLE";
+            Column2.Name = "Column2";
+            Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            Column3.HeaderText = "CANTIDAD";
+            Column3.Name = "Column3";
+            Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            Column4.HeaderText = "PRECIO";
+            Column4.Name = "Column4";
+            Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            Column5.HeaderText = "SUBTOTAL";
+            Column5.Name = "Column5";
+            Column5.ReadOnly = true;
             // 
             // button2
             // 
@@ -284,36 +315,6 @@
             label2.Size = new Size(338, 45);
             label2.TabIndex = 13;
             label2.Text = "VENDER PRODUCTO";
-            // 
-            // Column1
-            // 
-            Column1.HeaderText = "NRO";
-            Column1.Name = "Column1";
-            Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            Column2.HeaderText = "DETALLE";
-            Column2.Name = "Column2";
-            Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            Column3.HeaderText = "CANTIDAD";
-            Column3.Name = "Column3";
-            Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            Column4.HeaderText = "PRECIO";
-            Column4.Name = "Column4";
-            Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            Column5.HeaderText = "SUBTOTAL";
-            Column5.Name = "Column5";
-            Column5.ReadOnly = true;
             // 
             // VendedorInsertarVista
             // 

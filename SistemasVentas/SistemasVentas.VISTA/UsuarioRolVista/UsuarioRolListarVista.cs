@@ -31,6 +31,7 @@ namespace SistemasVentas.VISTA.UsuarioRolVista
             {
                 dataGridView1.DataSource = bss.UsuarioRolDatosBss();
             }
+            this.Close();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -41,6 +42,7 @@ namespace SistemasVentas.VISTA.UsuarioRolVista
             {
                 dataGridView1.DataSource = bss.UsuarioRolDatosBss();
             }
+            this.Close();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -52,6 +54,7 @@ namespace SistemasVentas.VISTA.UsuarioRolVista
                 bss.EliminarUsuarioRolBss(IdUsuarioRolSelecionado);
                 dataGridView1.DataSource = bss.UsuarioRolDatosBss();
             }
+            this.Close();
         }
     }
 }

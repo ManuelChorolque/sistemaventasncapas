@@ -36,13 +36,13 @@
             button3 = new Button();
             button2 = new Button();
             button1 = new Button();
-            panel2 = new Panel();
             dataGridView1 = new DataGridView();
+            panel2 = new Panel();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel3.SuspendLayout();
-            panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -64,6 +64,7 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 13;
             pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // label2
             // 
@@ -124,15 +125,6 @@
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
-            // panel2
-            // 
-            panel2.BackColor = Color.FromArgb(192, 255, 255);
-            panel2.Controls.Add(dataGridView1);
-            panel2.Location = new Point(0, 100);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(803, 355);
-            panel2.TabIndex = 7;
-            // 
             // dataGridView1
             // 
             dataGridView1.AllowUserToAddRows = false;
@@ -145,6 +137,15 @@
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView1.Size = new Size(772, 322);
             dataGridView1.TabIndex = 15;
+            // 
+            // panel2
+            // 
+            panel2.BackColor = Color.FromArgb(192, 255, 255);
+            panel2.Controls.Add(dataGridView1);
+            panel2.Location = new Point(0, 100);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(803, 355);
+            panel2.TabIndex = 7;
             // 
             // ProvedorListarVista
             // 
@@ -161,8 +162,8 @@
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel3.ResumeLayout(false);
-            panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            panel2.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -175,7 +176,7 @@
         private Button button3;
         private Button button2;
         private Button button1;
-        private Panel panel2;
         private DataGridView dataGridView1;
+        private Panel panel2;
     }
 }

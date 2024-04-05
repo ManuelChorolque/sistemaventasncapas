@@ -33,7 +33,6 @@
             pictureBox1 = new PictureBox();
             label2 = new Label();
             panel2 = new Panel();
-            button5 = new Button();
             button15 = new Button();
             dataGridView1 = new DataGridView();
             panel3 = new Panel();
@@ -67,6 +66,7 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 13;
             pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // label2
             // 
@@ -83,7 +83,6 @@
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(192, 255, 255);
-            panel2.Controls.Add(button5);
             panel2.Controls.Add(button15);
             panel2.Controls.Add(dataGridView1);
             panel2.Location = new Point(2, 108);
@@ -91,24 +90,12 @@
             panel2.Size = new Size(803, 343);
             panel2.TabIndex = 4;
             // 
-            // button5
-            // 
-            button5.BackColor = SystemColors.MenuHighlight;
-            button5.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            button5.ForeColor = SystemColors.ControlLightLight;
-            button5.Location = new Point(438, 296);
-            button5.Name = "button5";
-            button5.Size = new Size(149, 34);
-            button5.TabIndex = 19;
-            button5.Text = "CANCELAR";
-            button5.UseVisualStyleBackColor = false;
-            // 
             // button15
             // 
             button15.BackColor = SystemColors.MenuHighlight;
             button15.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             button15.ForeColor = SystemColors.ControlLightLight;
-            button15.Location = new Point(182, 296);
+            button15.Location = new Point(310, 296);
             button15.Name = "button15";
             button15.Size = new Size(149, 34);
             button15.TabIndex = 18;
@@ -149,7 +136,7 @@
             button4.Name = "button4";
             button4.Size = new Size(113, 23);
             button4.TabIndex = 17;
-            button4.Text = "DETALLE INGRESO";
+            button4.Text = "DETALLE VENTA";
             button4.UseVisualStyleBackColor = false;
             button4.Click += button4_Click;
             // 
@@ -221,7 +208,6 @@
         private Button button2;
         private Button button1;
         private DataGridView dataGridView1;
-        private Button button5;
         private Button button15;
     }
 }

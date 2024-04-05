@@ -33,6 +33,7 @@ namespace SistemasVentas.VISTA.ProveeVista
             {
                 dataGridView1.DataSource = bss.ProveeDatosBss();
             }
+            this.Close();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -43,6 +44,7 @@ namespace SistemasVentas.VISTA.ProveeVista
             {
                 dataGridView1.DataSource = bss.ProveeDatosBss();
             }
+            this.Close();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -54,6 +56,7 @@ namespace SistemasVentas.VISTA.ProveeVista
                 bss.EliminarProveeBss(IdProveeSelecionado);
                 dataGridView1.DataSource = bss.ProveeDatosBss();
             }
+            this.Close();
         }
     }
 }

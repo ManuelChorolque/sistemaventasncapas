@@ -1,4 +1,5 @@
 ﻿using SistemasVentas.BSS;
+using SistemasVentas.VISTA.SistemaVentaVista;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -40,6 +41,18 @@ namespace SistemasVentas.VISTA.ProvedorVista
         {
             IngresoBss bss = new IngresoBss();
             dataGridView1.DataSource = bss.IngresoDatosBss();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Esta seguro de que desea cerrar sesion", "Cerrar Sesion", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                SistemaVentaInicioVista inicioVista = new SistemaVentaInicioVista();
+                inicioVista.Show();
+
+                this.Close();
+            }
         }
     }
 }

@@ -68,9 +68,9 @@
             button1.DialogResult = DialogResult.Cancel;
             button1.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             button1.ForeColor = SystemColors.ControlLightLight;
-            button1.Location = new Point(291, 299);
+            button1.Location = new Point(297, 305);
             button1.Name = "button1";
-            button1.Size = new Size(136, 34);
+            button1.Size = new Size(137, 28);
             button1.TabIndex = 19;
             button1.Text = "CANCELAR";
             button1.UseVisualStyleBackColor = false;
@@ -81,9 +81,9 @@
             button3.DialogResult = DialogResult.OK;
             button3.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             button3.ForeColor = SystemColors.ControlLightLight;
-            button3.Location = new Point(114, 299);
+            button3.Location = new Point(114, 305);
             button3.Name = "button3";
-            button3.Size = new Size(118, 34);
+            button3.Size = new Size(118, 28);
             button3.TabIndex = 18;
             button3.Text = "SELECCIONAR";
             button3.UseVisualStyleBackColor = false;

@@ -136,6 +136,7 @@
             // button1
             // 
             button1.BackColor = SystemColors.MenuHighlight;
+            button1.DialogResult = DialogResult.OK;
             button1.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             button1.ForeColor = SystemColors.ControlLightLight;
             button1.Location = new Point(211, 282);

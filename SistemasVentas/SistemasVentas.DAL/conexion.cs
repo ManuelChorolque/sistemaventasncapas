@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using System.Runtime.CompilerServices;
 
 namespace SistemasVentas.DAL
 {
@@ -60,22 +61,24 @@ namespace SistemasVentas.DAL
 			da.Fill(dt);
 			return dt;
 		}
-		//public static bool VerificadorCredenciales(string usuario, string contraseña)
-		//{
-		//	string consulta = "SELECT COUNT(1) FROM usuario WHERE nombreuser=@Usuario AND contraseña=@Contraseña";
-		//	using (SqlConnection conectar=new SqlConnection(CONECTAR))
-		//	{
-		//		conectar.Open();
-		//		SqlCommand cmd = new SqlCommand(consulta, conectar);
-		//		cmd.Parameters.AddWithValue("@Usuario",usuario);
-		//		cmd.Parameters.AddWithValue("@Contraseña",contraseña);
+		public static bool VerificadorCredenciales(string usuario, string contraseña)
+		{
+			string consulta = "SELECT COUNT(1) FROM usuario WHERE nombreuser=@Usuario AND contraseña=@Contraseña";
+			using (SqlConnection conectar = new SqlConnection(CONECTAR))
+			{
+				conectar.Open();
+				SqlCommand cmd = new SqlCommand(consulta, conectar);
+				cmd.Parameters.AddWithValue("@Usuario", usuario);
+				cmd.Parameters.AddWithValue("@Contraseña", contraseña);
 
-		//		int count = Convert.ToInt32(cmd.ExecuteScalar());
-		//		return count == 1;
+				int count = Convert.ToInt32(cmd.ExecuteScalar());
+				return count == 1;
 
-		//	}
-		//}
-      
+			}
+			
+		}
 
-    }
+
+
+	}
 }

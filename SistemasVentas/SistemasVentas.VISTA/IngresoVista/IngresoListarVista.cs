@@ -39,6 +39,7 @@ namespace SistemasVentas.VISTA.IngresoVista
             {
                 dataGridView1.DataSource = bss.IngresoDatosBss();
             }
+            this.Close();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -49,6 +50,7 @@ namespace SistemasVentas.VISTA.IngresoVista
             {
                 dataGridView1.DataSource = bss.IngresoDatosBss();
             }
+            this.Close();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -60,6 +62,7 @@ namespace SistemasVentas.VISTA.IngresoVista
                 bss.EliminarIngresoBss(IdIngresoSelecionado);
                 dataGridView1.DataSource = bss.IngresoDatosBss();
             }
+            this.Close();
         }
     }
 }

@@ -45,6 +45,7 @@ namespace SistemasVentas.VISTA.UsuarioVista
             {
                 dataGridView1.DataSource = bss.UsuarioDatosBss();
             }
+            this.Close();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -55,6 +56,7 @@ namespace SistemasVentas.VISTA.UsuarioVista
             {
                 dataGridView1.DataSource=bss.UsuarioDatosBss();
             }
+            this.Close();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -66,6 +68,7 @@ namespace SistemasVentas.VISTA.UsuarioVista
                 bss.EliminarUsuarioBss(IdUsuarioSelecionado);
                 dataGridView1.DataSource = bss.UsuarioDatosBss();
             }
+            this.Close();
         }
     }
 }

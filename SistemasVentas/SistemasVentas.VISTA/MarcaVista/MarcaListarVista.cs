@@ -40,6 +40,7 @@ namespace SistemasVentas.VISTA.MarcaVista
             {
                 dataGridView1.DataSource = bss.ListarMarcaBss();
             }
+            this.Close();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -50,6 +51,7 @@ namespace SistemasVentas.VISTA.MarcaVista
             {
                 dataGridView1.DataSource = bss.ListarMarcaBss();
             }
+            this.Close();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -61,6 +63,7 @@ namespace SistemasVentas.VISTA.MarcaVista
                 bss.EliminarMarcaBss(IdMarcaSelecionado);
                 dataGridView1.DataSource = bss.ListarMarcaBss();
             }
+            this.Close();
         }
     }
 }

@@ -45,7 +45,7 @@
             panel2.Controls.Add(label2);
             panel2.Location = new Point(2, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(395, 90);
+            panel2.Size = new Size(492, 90);
             panel2.TabIndex = 2;
             // 
             // label2
@@ -54,7 +54,7 @@
             label2.BackColor = Color.Teal;
             label2.Font = new Font("Segoe UI Black", 24F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(24, 22);
+            label2.Location = new Point(63, 23);
             label2.Name = "label2";
             label2.Size = new Size(367, 45);
             label2.TabIndex = 13;
@@ -68,7 +68,7 @@
             panel1.Controls.Add(dataGridView1);
             panel1.Location = new Point(2, 87);
             panel1.Name = "panel1";
-            panel1.Size = new Size(395, 364);
+            panel1.Size = new Size(492, 351);
             panel1.TabIndex = 3;
             // 
             // button1
@@ -77,7 +77,7 @@
             button1.DialogResult = DialogResult.Cancel;
             button1.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             button1.ForeColor = SystemColors.ControlLightLight;
-            button1.Location = new Point(206, 299);
+            button1.Location = new Point(281, 299);
             button1.Name = "button1";
             button1.Size = new Size(129, 34);
             button1.TabIndex = 19;
@@ -90,7 +90,7 @@
             button3.DialogResult = DialogResult.OK;
             button3.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             button3.ForeColor = SystemColors.ControlLightLight;
-            button3.Location = new Point(54, 299);
+            button3.Location = new Point(86, 299);
             button3.Name = "button3";
             button3.Size = new Size(121, 34);
             button3.TabIndex = 18;
@@ -107,14 +107,14 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(371, 266);
+            dataGridView1.Size = new Size(466, 266);
             dataGridView1.TabIndex = 11;
             // 
             // VendedorProductoListarVista
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(397, 450);
+            ClientSize = new Size(495, 437);
             Controls.Add(panel1);
             Controls.Add(panel2);
             Name = "VendedorProductoListarVista";

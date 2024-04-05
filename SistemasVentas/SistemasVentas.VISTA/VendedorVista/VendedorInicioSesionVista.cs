@@ -21,23 +21,26 @@ namespace SistemasVentas.VISTA.VendedorVista
 
         private void button1_Click(object sender, EventArgs e)
         {
-            VendedorListarVista listarVista = new VendedorListarVista();
-            listarVista.Show();
 
-            //string usuario = textBox1.Text;
-            //string contraseña= textBox2.Text;
+            string usuario = textBox1.Text;
+            string contraseña= textBox2.Text;
 
-            //if(conexion.VerificadorCredenciales(usuario,contraseña))
-            //{
-            //    MessageBox.Show("Iniciando sesion");
-            //    VendedorListarVista formulario = new VendedorListarVista();
-            //    formulario.Show();
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Usuario o contraseña incorrecta");
-            //}
+            if(conexion.VerificadorCredenciales(usuario,contraseña))
+            {
+                MessageBox.Show("Iniciando sesion");
+                VendedorListarVista formulario = new VendedorListarVista();
+               
+                formulario.Show();
+            }
+            else
+            {
+                MessageBox.Show("Usuario o contraseña incorrecta");
+            }
+            this.Close();
 
         }
     }
 }
+//VendedorListarVista listarVista = new VendedorListarVista();
+//listarVista.Show();
+//this.Close();

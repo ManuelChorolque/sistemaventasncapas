@@ -39,6 +39,7 @@ namespace SistemasVentas.VISTA.VentaVista
             {
                 dataGridView1.DataSource = bss.VentaDatosBss();
             }
+            this.Close();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -49,6 +50,7 @@ namespace SistemasVentas.VISTA.VentaVista
             {
                 dataGridView1.DataSource = bss.VentaDatosBss();
             }
+            this.Close();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -60,6 +62,7 @@ namespace SistemasVentas.VISTA.VentaVista
                 bss.EliminarVentaBss(IdVentaSelecionado);
                 dataGridView1.DataSource = bss.VentaDatosBss();
             }
+            this.Close();
         }
     }
 }

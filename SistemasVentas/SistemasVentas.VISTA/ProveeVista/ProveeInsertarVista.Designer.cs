@@ -40,96 +40,113 @@
             dateTimePicker1 = new DateTimePicker();
             button3 = new Button();
             button4 = new Button();
+            panel1 = new Panel();
+            label6 = new Label();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(111, 115);
+            label1.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = SystemColors.ControlLightLight;
+            label1.Location = new Point(13, 85);
             label1.Name = "label1";
-            label1.Size = new Size(68, 15);
+            label1.Size = new Size(87, 20);
             label1.TabIndex = 0;
             label1.Text = "PRODUCTO";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(106, 162);
+            label2.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.ForeColor = SystemColors.ControlLightLight;
+            label2.Location = new Point(8, 132);
             label2.Name = "label2";
-            label2.Size = new Size(73, 15);
+            label2.Size = new Size(95, 20);
             label2.TabIndex = 1;
             label2.Text = "PROVEEDOR";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(135, 203);
+            label3.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.ForeColor = SystemColors.ControlLightLight;
+            label3.Location = new Point(37, 173);
             label3.Name = "label3";
-            label3.Size = new Size(44, 15);
+            label3.Size = new Size(55, 20);
             label3.TabIndex = 2;
             label3.Text = "FECHA";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(132, 246);
+            label4.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.ForeColor = SystemColors.ControlLightLight;
+            label4.Location = new Point(34, 216);
             label4.Name = "label4";
-            label4.Size = new Size(47, 15);
+            label4.Size = new Size(59, 20);
             label4.TabIndex = 3;
             label4.Text = "PRECIO";
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(215, 112);
+            textBox1.Location = new Point(117, 82);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(282, 23);
             textBox1.TabIndex = 4;
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(215, 159);
+            textBox2.Location = new Point(117, 129);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(282, 23);
             textBox2.TabIndex = 5;
             // 
             // textBox4
             // 
-            textBox4.Location = new Point(215, 243);
+            textBox4.Location = new Point(117, 213);
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(393, 23);
             textBox4.TabIndex = 7;
             // 
             // button1
             // 
+            button1.BackColor = SystemColors.MenuHighlight;
             button1.DialogResult = DialogResult.OK;
-            button1.Location = new Point(254, 309);
+            button1.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            button1.ForeColor = SystemColors.ControlLightLight;
+            button1.Location = new Point(154, 266);
             button1.Name = "button1";
-            button1.Size = new Size(75, 23);
+            button1.Size = new Size(99, 29);
             button1.TabIndex = 8;
             button1.Text = "GUARDAR";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
             // button2
             // 
+            button2.BackColor = SystemColors.MenuHighlight;
             button2.DialogResult = DialogResult.Cancel;
-            button2.Location = new Point(413, 309);
+            button2.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            button2.ForeColor = SystemColors.ControlLightLight;
+            button2.Location = new Point(313, 266);
             button2.Name = "button2";
-            button2.Size = new Size(75, 23);
+            button2.Size = new Size(99, 29);
             button2.TabIndex = 9;
             button2.Text = "CANCELAR";
-            button2.UseVisualStyleBackColor = true;
+            button2.UseVisualStyleBackColor = false;
             // 
             // dateTimePicker1
             // 
-            dateTimePicker1.Location = new Point(215, 197);
+            dateTimePicker1.Location = new Point(117, 167);
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(393, 23);
             dateTimePicker1.TabIndex = 10;
             // 
             // button3
             // 
-            button3.Location = new Point(505, 112);
+            button3.Location = new Point(407, 82);
             button3.Name = "button3";
             button3.Size = new Size(103, 23);
             button3.TabIndex = 11;
@@ -139,7 +156,7 @@
             // 
             // button4
             // 
-            button4.Location = new Point(505, 159);
+            button4.Location = new Point(407, 129);
             button4.Name = "button4";
             button4.Size = new Size(103, 23);
             button4.TabIndex = 12;
@@ -147,11 +164,33 @@
             button4.UseVisualStyleBackColor = true;
             button4.Click += button4_Click;
             // 
+            // panel1
+            // 
+            panel1.BackColor = Color.FromArgb(0, 64, 64);
+            panel1.Controls.Add(label6);
+            panel1.Location = new Point(-2, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(540, 66);
+            panel1.TabIndex = 38;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.ForeColor = SystemColors.ControlLightLight;
+            label6.Location = new Point(175, 21);
+            label6.Name = "label6";
+            label6.Size = new Size(226, 32);
+            label6.TabIndex = 0;
+            label6.Text = "INSERTAR PROVEE";
+            // 
             // ProveeInsertarVista
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            BackColor = Color.Teal;
+            ClientSize = new Size(535, 321);
+            Controls.Add(panel1);
             Controls.Add(button4);
             Controls.Add(button3);
             Controls.Add(dateTimePicker1);
@@ -166,6 +205,8 @@
             Controls.Add(label1);
             Name = "ProveeInsertarVista";
             Text = "ProveeInsertarVista";
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -184,5 +225,7 @@
         private DateTimePicker dateTimePicker1;
         private Button button3;
         private Button button4;
+        private Panel panel1;
+        private Label label6;
     }
 }
