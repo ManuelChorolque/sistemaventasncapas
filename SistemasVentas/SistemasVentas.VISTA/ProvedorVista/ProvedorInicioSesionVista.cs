@@ -29,7 +29,7 @@ namespace SistemasVentas.VISTA.ProvedorVista
             if (conexion.VerificadorCredenciales(usuario, contraseña))
             {
                 MessageBox.Show("Iniciando sesion");
-                VendedorListarVista formulario = new VendedorListarVista();
+                ProvedorListarVista formulario = new ProvedorListarVista();
 
                 formulario.Show();
             }

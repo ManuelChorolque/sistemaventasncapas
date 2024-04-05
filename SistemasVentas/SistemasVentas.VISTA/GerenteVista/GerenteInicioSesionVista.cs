@@ -28,7 +28,7 @@ namespace SistemasVentas.VISTA.GerenteVista
             if (conexion.VerificadorCredenciales(usuario, contraseña))
             {
                 MessageBox.Show("Iniciando sesion");
-                VendedorListarVista formulario = new VendedorListarVista();
+                GerenteListarVista formulario = new GerenteListarVista();
 
                 formulario.Show();
             }
